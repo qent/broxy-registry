@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/context7",
+  "title": "Context7",
+  "description": "Up-to-date code and API docs for prompts.",
+  "version": "2.1.6",
+  "websiteUrl": "https://context7.com",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/upstash/context7"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/context7.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": [
+        {
+          "name": "CONTEXT7_API_KEY",
+          "description": "Optional Context7 API key for authenticated access.",
+          "value": "{context7_api_key}",
+          "isRequired": false,
+          "isSecret": true,
+          "variables": {
+            "context7_api_key": {
+              "description": "Context7 API key.",
+              "isRequired": false,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools",
+        "resources"
+      ]
+    }
+  }
+}

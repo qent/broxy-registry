@@ -1,0 +1,58 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/downloads-files",
+  "title": "Downloads Filesystem",
+  "description": "Local filesystem tools for one or more configured directories.",
+  "version": "2026.1.14",
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "subfolder": "src/filesystem"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/downloads-files.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@modelcontextprotocol/server-filesystem",
+      "version": "2026.1.14",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "positional",
+          "valueHint": "allowed_directory",
+          "description": "Allowed directory path passed to filesystem server.",
+          "format": "filepath",
+          "placeholder": "/Users/you/Downloads",
+          "isRequired": true,
+          "isRepeated": true
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools",
+        "resources"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/exa",
+  "title": "Exa",
+  "description": "Web and code search from the Exa MCP endpoint.",
+  "version": "3.2.0",
+  "websiteUrl": "https://docs.exa.ai/reference/exa-mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/exa-labs/exa-mcp-server"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/exa.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.exa.ai/mcp"
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

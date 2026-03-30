@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/todoist",
+  "title": "Todoist",
+  "description": "Todoist task management server with OAuth support.",
+  "version": "8.7.1",
+  "websiteUrl": "https://ai.todoist.net/mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/Doist/todoist-ai"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/todoist.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ai.todoist.net/mcp"
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools",
+        "resources",
+        "prompts"
+      ]
+    }
+  }
+}

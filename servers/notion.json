@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/notion",
+  "title": "Notion",
+  "description": "Official Notion MCP endpoint with OAuth authentication.",
+  "version": "latest",
+  "websiteUrl": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/makenotion/notion-mcp-server"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/notion.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.notion.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools",
+        "resources",
+        "prompts"
+      ]
+    }
+  }
+}

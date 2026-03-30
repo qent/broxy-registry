@@ -1,0 +1,52 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/intellij-idea-ce",
+  "title": "IntelliJ IDEA CE",
+  "description": "Connect to local IntelliJ MCP server over SSE.",
+  "version": "2026.1",
+  "websiteUrl": "https://www.jetbrains.com/help/idea/mcp-server.html",
+  "repository": {
+    "source": "npm",
+    "url": "https://www.npmjs.com/package/@jetbrains/mcp-proxy"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/intellij-idea-ce.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "http://localhost:64343/sse",
+      "headers": [
+        {
+          "name": "IJ_MCP_SERVER_PROJECT_PATH",
+          "description": "Absolute path to the project opened in IntelliJ IDEA.",
+          "value": "{project_path}",
+          "isRequired": true,
+          "isSecret": false,
+          "variables": {
+            "project_path": {
+              "description": "Absolute project path for IntelliJ MCP context.",
+              "format": "filepath",
+              "placeholder": "/Users/you/Repos/project",
+              "isRequired": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools",
+        "resources"
+      ]
+    }
+  }
+}
