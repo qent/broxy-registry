@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/linear",
+  "title": "Linear MCP Server",
+  "description": "Official Linear remote MCP endpoint.",
+  "version": "latest",
+  "websiteUrl": "https://linear.app/docs/mcp",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/linear.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.linear.app/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional bearer token using Linear API key or OAuth token.",
+          "value": "Bearer {linear_token}",
+          "isRequired": false,
+          "isSecret": true,
+          "variables": {
+            "linear_token": {
+              "description": "Linear API key or OAuth access token.",
+              "isRequired": false,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/box",
+  "title": "Box MCP Server",
+  "description": "Official Box remote MCP endpoint for Box content and AI tools.",
+  "version": "latest",
+  "websiteUrl": "https://developer.box.com/guides/box-mcp/remote",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/box.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.box.com",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional bearer token for clients that pass direct auth tokens.",
+          "value": "Bearer {box_access_token}",
+          "isRequired": false,
+          "isSecret": true,
+          "variables": {
+            "box_access_token": {
+              "description": "Box OAuth access token.",
+              "isRequired": false,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

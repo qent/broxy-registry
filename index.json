@@ -2,6 +2,10 @@
   "schemaVersion": 1,
   "servers": [
     {
+      "id": "box",
+      "path": "servers/box.json"
+    },
+    {
       "id": "brave",
       "path": "servers/brave.json"
     },
@@ -12,6 +16,10 @@
     {
       "id": "downloads-files",
       "path": "servers/downloads-files.json"
+    },
+    {
+      "id": "dropbox",
+      "path": "servers/dropbox.json"
     },
     {
       "id": "exa",
@@ -26,12 +34,28 @@
       "path": "servers/intellij-idea-ce.json"
     },
     {
+      "id": "linear",
+      "path": "servers/linear.json"
+    },
+    {
       "id": "notion",
       "path": "servers/notion.json"
     },
     {
+      "id": "slack",
+      "path": "servers/slack.json"
+    },
+    {
+      "id": "stripe",
+      "path": "servers/stripe.json"
+    },
+    {
       "id": "todoist",
       "path": "servers/todoist.json"
+    },
+    {
+      "id": "vercel",
+      "path": "servers/vercel.json"
     }
   ]
 }

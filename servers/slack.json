@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/slack",
+  "title": "Slack MCP Server",
+  "description": "Official Slack remote MCP endpoint for workspace tools.",
+  "version": "latest",
+  "websiteUrl": "https://docs.slack.dev/ai/slack-mcp-server/",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/slack.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.slack.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
