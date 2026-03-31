@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/time",
+  "title": "Time",
+  "description": "MCP server that provides current time and timezone tools.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "subfolder": "src/time"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/time.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "mcp-server-time",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

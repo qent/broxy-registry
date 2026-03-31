@@ -50,6 +50,10 @@
       "path": "servers/stripe.json"
     },
     {
+      "id": "time",
+      "path": "servers/time.json"
+    },
+    {
       "id": "todoist",
       "path": "servers/todoist.json"
     },
