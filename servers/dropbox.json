@@ -17,23 +17,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.dropbox.com/dash",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Optional bearer token for clients without OAuth flow.",
-          "value": "Bearer {dropbox_dash_token}",
-          "isRequired": false,
-          "isSecret": true,
-          "variables": {
-            "dropbox_dash_token": {
-              "description": "Dropbox Dash access token.",
-              "isRequired": false,
-              "isSecret": true
-            }
-          }
-        }
-      ]
+      "url": "https://mcp.dropbox.com/dash"
     }
   ],
   "_meta": {

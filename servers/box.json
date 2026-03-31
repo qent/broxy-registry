@@ -17,23 +17,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.box.com",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Optional bearer token for clients that pass direct auth tokens.",
-          "value": "Bearer {box_access_token}",
-          "isRequired": false,
-          "isSecret": true,
-          "variables": {
-            "box_access_token": {
-              "description": "Box OAuth access token.",
-              "isRequired": false,
-              "isSecret": true
-            }
-          }
-        }
-      ]
+      "url": "https://mcp.box.com"
     }
   ],
   "_meta": {

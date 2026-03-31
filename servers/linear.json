@@ -17,23 +17,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.linear.app/mcp",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Optional bearer token using Linear API key or OAuth token.",
-          "value": "Bearer {linear_token}",
-          "isRequired": false,
-          "isSecret": true,
-          "variables": {
-            "linear_token": {
-              "description": "Linear API key or OAuth access token.",
-              "isRequired": false,
-              "isSecret": true
-            }
-          }
-        }
-      ]
+      "url": "https://mcp.linear.app/mcp"
     }
   ],
   "_meta": {

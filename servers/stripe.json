@@ -22,23 +22,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.stripe.com",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Optional bearer token (recommended: restricted Stripe API key).",
-          "value": "Bearer {stripe_token}",
-          "isRequired": false,
-          "isSecret": true,
-          "variables": {
-            "stripe_token": {
-              "description": "Stripe restricted API key or OAuth access token.",
-              "isRequired": false,
-              "isSecret": true
-            }
-          }
-        }
-      ]
+      "url": "https://mcp.stripe.com"
     }
   ],
   "_meta": {

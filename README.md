@@ -49,18 +49,18 @@ Reference format:
 | Catalog ID | Server name (`name`) | Main transport | Auth/config template fields |
 |---|---|---|---|
 | `context7` | `io.qent.broxy/context7` | `remotes: streamable-http` | Optional header `CONTEXT7_API_KEY` |
-| `box` | `io.qent.broxy/box` | `remotes: streamable-http` | OAuth flow, optional `Authorization` header |
+| `box` | `io.qent.broxy/box` | `remotes: streamable-http` | MCP OAuth flow |
 | `todoist` | `io.qent.broxy/todoist` | `remotes: streamable-http` | OAuth flow on client side |
-| `dropbox` | `io.qent.broxy/dropbox` | `remotes: streamable-http` | OAuth flow, optional `Authorization` header |
+| `dropbox` | `io.qent.broxy/dropbox` | `remotes: streamable-http` | MCP OAuth flow |
 | `brave` | `io.qent.broxy/brave` | `packages: oci + stdio` | Required env `BRAVE_API_KEY` |
 | `exa` | `io.qent.broxy/exa` | `remotes: streamable-http` | No required template field |
 | `intellij-idea-ce` | `io.qent.broxy/intellij-idea-ce` | `remotes: sse` | Required header `IJ_MCP_SERVER_PROJECT_PATH` (`filepath`) |
 | `downloads-files` | `io.qent.broxy/downloads-files` | `packages: npm + stdio` | Required repeated positional `allowed_directory` (`filepath`) |
 | `github` | `io.qent.broxy/github` | `remotes: streamable-http` | Required header `Authorization: Bearer {github_pat}` |
-| `linear` | `io.qent.broxy/linear` | `remotes: streamable-http` | OAuth flow, optional `Authorization` header |
+| `linear` | `io.qent.broxy/linear` | `remotes: streamable-http` | MCP OAuth flow |
 | `notion` | `io.qent.broxy/notion` | `remotes: streamable-http` | OAuth flow on client side |
 | `slack` | `io.qent.broxy/slack` | `remotes: streamable-http` | OAuth flow on client side |
-| `stripe` | `io.qent.broxy/stripe` | `remotes: streamable-http` | OAuth flow, optional `Authorization` header |
+| `stripe` | `io.qent.broxy/stripe` | `remotes: streamable-http` | MCP OAuth flow |
 | `vercel` | `io.qent.broxy/vercel` | `remotes: streamable-http` | OAuth flow on client side |
 
 ## Validation
