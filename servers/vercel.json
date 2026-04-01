@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.qent.broxy/vercel",
-  "title": "Vercel MCP",
-  "description": "Official Vercel remote MCP endpoint with OAuth.",
+  "title": "Vercel",
+  "description": "Frontend cloud platform for building, deploying, and scaling modern web applications.",
   "version": "latest",
   "websiteUrl": "https://vercel.com/docs/agent-resources/vercel-mcp",
   "icons": [
@@ -10,7 +10,7 @@
       "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/vercel.png",
       "mimeType": "image/png",
       "sizes": [
-        "64x64"
+        "128x128"
       ]
     }
   ],

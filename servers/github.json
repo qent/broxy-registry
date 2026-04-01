@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.qent.broxy/github",
-  "title": "GitHub Copilot MCP",
-  "description": "GitHub remote MCP endpoint for Copilot-compatible clients.",
+  "title": "GitHub",
+  "description": "Developer platform for repositories, pull requests, issues, and team collaboration.",
   "version": "latest",
   "websiteUrl": "https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp/extend-copilot-chat-with-mcp",
   "icons": [
@@ -10,7 +10,7 @@
       "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/github.png",
       "mimeType": "image/png",
       "sizes": [
-        "64x64"
+        "128x128"
       ]
     }
   ],

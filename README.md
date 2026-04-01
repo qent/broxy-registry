@@ -30,6 +30,7 @@ Reference format:
 │   ├── notion.json
 │   ├── slack.json
 │   ├── stripe.json
+│   ├── time.json
 │   ├── todoist.json
 │   └── vercel.json
 └── icons/
@@ -41,8 +42,23 @@ Reference format:
 - `index.json` uses `schemaVersion: 1` and `servers[].path` references.
 - Each server `name` is strict schema style: `io.qent.broxy/<id>`.
 - This repo stores only **safe templates**. No real tokens, PATs, local private paths, or secrets.
-- Icons are stored as PNG (`64x64`) and referenced via:
+- Icons are stored as PNG (`128x128`) and referenced via:
   - `https://raw.githubusercontent.com/qent/broxy-registry/main/icons/<file>.png`
+
+## Icon assets (Updated: 2026-04-01)
+
+- All catalog icons in `icons/*.png` are normalized to `128x128`.
+- For icon refreshes, prefer vector or high-resolution public brand assets from official/open repositories.
+- Keep transparency when available; avoid embedding low-resolution favicon assets.
+
+| Catalog IDs | Source |
+|---|---|
+| `box`, `brave`, `dropbox`, `github`, `intellij-idea-ce`, `linear`, `notion`, `stripe`, `todoist`, `vercel` | `simple-icons` project (SVG logos): `https://github.com/simple-icons/simple-icons` |
+| `context7` | `upstash/context7` official icon: `https://raw.githubusercontent.com/upstash/context7/master/public/context7-icon.svg` |
+| `downloads-files` | Heroicons (`folder-arrow-down`): `https://raw.githubusercontent.com/tailwindlabs/heroicons/master/src/24/solid/folder-arrow-down.svg` |
+| `time` | Heroicons (`clock`): `https://raw.githubusercontent.com/tailwindlabs/heroicons/master/src/24/solid/clock.svg` |
+| `slack` | Slack marketing asset (`400x400`): `https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png` |
+| `exa` | Exa homepage inline logomark SVG path (navbar logo): `https://exa.ai` |
 
 ## Servers
 
@@ -61,6 +77,7 @@ Reference format:
 | `notion` | `io.qent.broxy/notion` | `remotes: streamable-http` | OAuth flow on client side |
 | `slack` | `io.qent.broxy/slack` | `remotes: streamable-http` | OAuth flow on client side |
 | `stripe` | `io.qent.broxy/stripe` | `remotes: streamable-http` | MCP OAuth flow |
+| `time` | `io.qent.broxy/time` | `packages: pypi + stdio` | No required template field |
 | `vercel` | `io.qent.broxy/vercel` | `remotes: streamable-http` | OAuth flow on client side |
 
 ## Validation
@@ -68,7 +85,8 @@ Reference format:
 ```bash
 jq . index.json
 jq . servers/*.json
-npx -y ajv-cli validate -s /tmp/server.schema.json -d "servers/*.json"
+npx -y ajv-cli validate --strict=false -s /tmp/server.schema.json -d "servers/*.json"
+for f in icons/*.png; do sips -g pixelWidth -g pixelHeight "$f"; done
 ```
 
 ## Broxy integration check

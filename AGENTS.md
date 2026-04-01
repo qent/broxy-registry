@@ -23,6 +23,7 @@ Use MCP schema for validation:
 - Keep `servers[].id` stable and human-readable.
 - Keep `servers[].path` pointing to `servers/<id>.json`.
 - Keep icon URLs in server JSON pointing to raw files in this repository.
+- Keep icon metadata aligned with actual files (`icons[].sizes` must match real PNG size, currently `128x128`).
 
 ## Checks before push
 
@@ -30,6 +31,7 @@ Use MCP schema for validation:
 jq . index.json
 jq . servers/*.json
 curl -fsSL https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json -o /tmp/server.schema.json
-npx -y ajv-cli validate -s /tmp/server.schema.json -d "servers/*.json"
+npx -y ajv-cli validate --strict=false -s /tmp/server.schema.json -d "servers/*.json"
 for f in icons/*.png; do file "$f"; done
+for f in icons/*.png; do sips -g pixelWidth -g pixelHeight "$f"; done
 ```

@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.qent.broxy/dropbox",
-  "title": "Dropbox Dash MCP Server",
-  "description": "Official Dropbox Dash remote MCP endpoint.",
+  "title": "Dropbox",
+  "description": "Cloud file storage and collaboration for syncing, sharing, and organizing team content.",
   "version": "latest",
   "websiteUrl": "https://help.dropbox.com/integrations/set-up-MCP-server",
   "icons": [
@@ -10,7 +10,7 @@
       "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/dropbox.png",
       "mimeType": "image/png",
       "sizes": [
-        "64x64"
+        "128x128"
       ]
     }
   ],

@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.qent.broxy/brave",
   "title": "Brave Search",
-  "description": "Web and local search powered by Brave Search API.",
+  "description": "Private web search to find fresh information, websites, and local results quickly.",
   "version": "0.6.2",
   "websiteUrl": "https://brave.com/search/api/",
   "repository": {
@@ -15,7 +15,7 @@
       "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/brave.png",
       "mimeType": "image/png",
       "sizes": [
-        "64x64"
+        "128x128"
       ]
     }
   ],
