@@ -1,0 +1,108 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/graphlit",
+  "title": "Graphlit",
+  "description": "Knowledge ingestion and retrieval platform for multi-source content pipelines and AI applications.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/graphlit/graphlit-mcp-server",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/graphlit/graphlit-mcp-server"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/graphlit.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Your Graphlit environment ID",
+          "isRequired": true,
+          "name": "GRAPHLIT_ENVIRONMENT_ID"
+        },
+        {
+          "description": "Your Graphlit organization ID",
+          "isRequired": true,
+          "name": "GRAPHLIT_ORGANIZATION_ID"
+        },
+        {
+          "description": "Your JWT secret for signing the JWT token",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "GRAPHLIT_JWT_SECRET"
+        },
+        {
+          "description": "Slack bot token for Slack integration",
+          "isSecret": true,
+          "name": "SLACK_BOT_TOKEN"
+        },
+        {
+          "description": "Discord bot token for Discord integration",
+          "isSecret": true,
+          "name": "DISCORD_BOT_TOKEN"
+        },
+        {
+          "description": "Twitter/X API token",
+          "isSecret": true,
+          "name": "TWITTER_TOKEN"
+        },
+        {
+          "description": "Google refresh token for Gmail integration",
+          "isSecret": true,
+          "name": "GOOGLE_EMAIL_REFRESH_TOKEN"
+        },
+        {
+          "description": "Google client ID for Gmail integration",
+          "name": "GOOGLE_EMAIL_CLIENT_ID"
+        },
+        {
+          "description": "Google client secret for Gmail integration",
+          "isSecret": true,
+          "name": "GOOGLE_EMAIL_CLIENT_SECRET"
+        },
+        {
+          "description": "Linear API key for Linear integration",
+          "isSecret": true,
+          "name": "LINEAR_API_KEY"
+        },
+        {
+          "description": "GitHub personal access token",
+          "isSecret": true,
+          "name": "GITHUB_PERSONAL_ACCESS_TOKEN"
+        },
+        {
+          "description": "Jira email for authentication",
+          "name": "JIRA_EMAIL"
+        },
+        {
+          "description": "Jira API token",
+          "isSecret": true,
+          "name": "JIRA_TOKEN"
+        },
+        {
+          "description": "Notion API key for Notion integration",
+          "isSecret": true,
+          "name": "NOTION_API_KEY"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/npx/graphlit-mcp-server:1.0.20260112001",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

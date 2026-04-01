@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/sonarqube",
+  "title": "SonarQube",
+  "description": "Code quality and security platform for static analysis, policy enforcement, and governance.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/SonarSource/sonarqube-mcp-server",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/SonarSource/sonarqube-mcp-server"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/sonarqube.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "SonarQube user auth token with necessary scopes",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "SONARQUBE_TOKEN"
+        },
+        {
+          "description": "SonarQube Server base URL (required for self-hosted instances)",
+          "name": "SONARQUBE_URL"
+        },
+        {
+          "description": "SonarQube Cloud organization key (required for SonarQube Cloud)",
+          "name": "SONARQUBE_ORG"
+        },
+        {
+          "description": "Comma-separated list of toolsets to enable (e.g., analysis,issues,quality-gates - see docs)",
+          "name": "SONARQUBE_TOOLSETS"
+        },
+        {
+          "description": "Set to \"true\" to disable all write operations",
+          "name": "SONARQUBE_READ_ONLY"
+        }
+      ],
+      "identifier": "docker.io/mcp/sonarqube:latest",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

@@ -38,8 +38,16 @@
       "path": "servers/browserbase.json"
     },
     {
+      "id": "chroma-mcp",
+      "path": "servers/chroma-mcp.json"
+    },
+    {
       "id": "chrome-devtools-mcp",
       "path": "servers/chrome-devtools-mcp.json"
+    },
+    {
+      "id": "cloud-run",
+      "path": "servers/cloud-run.json"
     },
     {
       "id": "context7",
@@ -52,6 +60,10 @@
     {
       "id": "dropbox",
       "path": "servers/dropbox.json"
+    },
+    {
+      "id": "elasticsearch",
+      "path": "servers/elasticsearch.json"
     },
     {
       "id": "exa",
@@ -74,12 +86,28 @@
       "path": "servers/grafana.json"
     },
     {
+      "id": "graphlit",
+      "path": "servers/graphlit.json"
+    },
+    {
       "id": "jetbrains",
       "path": "servers/jetbrains.json"
     },
     {
       "id": "linear",
       "path": "servers/linear.json"
+    },
+    {
+      "id": "mcp-clickhouse",
+      "path": "servers/mcp-clickhouse.json"
+    },
+    {
+      "id": "mcp-server-neon",
+      "path": "servers/mcp-server-neon.json"
+    },
+    {
+      "id": "monday",
+      "path": "servers/monday.json"
     },
     {
       "id": "mongodb",
@@ -106,12 +134,24 @@
       "path": "servers/postgres-mcp-pro.json"
     },
     {
+      "id": "redis",
+      "path": "servers/redis.json"
+    },
+    {
       "id": "semgrep",
       "path": "servers/semgrep.json"
     },
     {
+      "id": "sentry",
+      "path": "servers/sentry.json"
+    },
+    {
       "id": "slack",
       "path": "servers/slack.json"
+    },
+    {
+      "id": "sonarqube",
+      "path": "servers/sonarqube.json"
     },
     {
       "id": "stripe",

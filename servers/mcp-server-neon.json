@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/mcp-server-neon",
+  "title": "Neon",
+  "description": "Serverless Postgres platform for managed databases, branching, and developer workflows.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/neondatabase-labs/mcp-server-neon",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/neondatabase-labs/mcp-server-neon"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/mcp-server-neon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "API key for Neon database service",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "NEON_API_KEY"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/npx/mcp-server-neon:0.6.5",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

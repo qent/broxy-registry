@@ -1,0 +1,60 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/cloud-run",
+  "title": "Google Cloud Run",
+  "description": "Managed container runtime on Google Cloud for deploying and operating stateless services.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/GoogleCloudPlatform/cloud-run-mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/GoogleCloudPlatform/cloud-run-mcp"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/cloud-run.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Path to Google Cloud credentials JSON file",
+          "isSecret": true,
+          "name": "GOOGLE_APPLICATION_CREDENTIALS"
+        },
+        {
+          "description": "Google Cloud project ID for deployments",
+          "name": "GOOGLE_CLOUD_PROJECT"
+        },
+        {
+          "description": "Default Google Cloud region for deployments",
+          "name": "GOOGLE_CLOUD_REGION"
+        },
+        {
+          "description": "Default Cloud Run service name",
+          "name": "DEFAULT_SERVICE_NAME"
+        },
+        {
+          "description": "Skip IAM permission checks (true/false)",
+          "name": "SKIP_IAM_CHECK"
+        }
+      ],
+      "identifier": "docker.io/mcp/cloud-run-mcp:latest",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

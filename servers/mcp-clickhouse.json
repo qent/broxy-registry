@@ -1,0 +1,84 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/mcp-clickhouse",
+  "title": "ClickHouse",
+  "description": "Columnar analytics database for high-performance SQL queries and OLAP workflows.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/ClickHouse/mcp-clickhouse",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/ClickHouse/mcp-clickhouse"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/mcp-clickhouse.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "The hostname of your ClickHouse server",
+          "isRequired": true,
+          "name": "CLICKHOUSE_HOST"
+        },
+        {
+          "description": "The username for authentication",
+          "isRequired": true,
+          "name": "CLICKHOUSE_USER"
+        },
+        {
+          "description": "The password for authentication",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "CLICKHOUSE_PASSWORD"
+        },
+        {
+          "default": "8443",
+          "description": "The port number of your ClickHouse server",
+          "name": "CLICKHOUSE_PORT"
+        },
+        {
+          "default": "true",
+          "description": "Enable/disable HTTPS connection",
+          "name": "CLICKHOUSE_SECURE"
+        },
+        {
+          "default": "true",
+          "description": "Enable/disable SSL certificate verification",
+          "name": "CLICKHOUSE_VERIFY"
+        },
+        {
+          "description": "Default database to use",
+          "name": "CLICKHOUSE_DATABASE"
+        },
+        {
+          "default": "false",
+          "description": "Enable/disable chDB functionality",
+          "name": "CHDB_ENABLED"
+        },
+        {
+          "default": ":memory:",
+          "description": "The path to the chDB data directory",
+          "name": "CHDB_DATA_PATH"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/uvx/mcp-clickhouse:0.2.0",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

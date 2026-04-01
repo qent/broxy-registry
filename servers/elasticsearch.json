@@ -1,0 +1,75 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/elasticsearch",
+  "title": "Elasticsearch",
+  "description": "Search and analytics engine for indexed data, vector search, and observability workloads.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/elastic/mcp-server-elasticsearch",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/elastic/mcp-server-elasticsearch"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/elasticsearch.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Your Elasticsearch instance URL",
+          "isRequired": true,
+          "name": "ES_URL"
+        },
+        {
+          "description": "Elasticsearch API key for authentication",
+          "isSecret": true,
+          "name": "ES_API_KEY"
+        },
+        {
+          "description": "Elasticsearch username for basic authentication",
+          "name": "ES_USERNAME"
+        },
+        {
+          "description": "Elasticsearch password for basic authentication",
+          "isSecret": true,
+          "name": "ES_PASSWORD"
+        },
+        {
+          "description": "Path to custom CA certificate for Elasticsearch SSL/TLS",
+          "name": "ES_CA_CERT"
+        },
+        {
+          "description": "Set to '1' or 'true' to skip SSL certificate verification",
+          "name": "ES_SSL_SKIP_VERIFY"
+        },
+        {
+          "description": "Path prefix for Elasticsearch instance exposed at a non-root path",
+          "name": "ES_PATH_PREFIX"
+        },
+        {
+          "description": "Server assumes Elasticsearch 9.x. Set to 8 target Elasticsearch 8.x",
+          "name": "ES_VERSION"
+        }
+      ],
+      "identifier": "docker.elastic.co/mcp/elasticsearch:0.4.6",
+      "registryType": "oci",
+      "transport": {
+        "type": "streamable-http",
+        "url": "http://localhost:8080"
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

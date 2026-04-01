@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/monday",
+  "title": "Monday.com",
+  "description": "Work management platform for projects, tasks, and cross-team workflow automation.",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/mondaycom/mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/mondaycom/mcp"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/monday.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://mcp.monday.com/sse"
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
