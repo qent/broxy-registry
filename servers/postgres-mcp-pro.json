@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "PostgreSQL querying, write operations, and performance analysis through MCP tools.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/postgres-mcp-pro.png"
+    }
+  ],
+  "name": "io.qent.broxy/postgres-mcp-pro",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "PostgreSQL connection string, like 'postgresql://username:password@host.docker.internal:5432/dbname'",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "DATABASE_URI"
+        },
+        {
+          "description": "OpenAI API key for experimental index tuning by LLM",
+          "isSecret": true,
+          "name": "OPENAI_API_KEY"
+        }
+      ],
+      "identifier": "crystaldba/postgres-mcp:0.3.0",
+      "registryType": "oci",
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:8000"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/crystaldba/postgres-mcp"
+  },
+  "title": "PostgreSQL Pro",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/crystaldba/postgres-mcp"
+}

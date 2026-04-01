@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Code security and quality scanning with semantic rules and actionable findings.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/semgrep.png"
+    }
+  ],
+  "name": "io.qent.broxy/semgrep",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Token for connecting to Semgrep AppSec Platform",
+          "isSecret": true,
+          "name": "SEMGREP_APP_TOKEN"
+        }
+      ],
+      "identifier": "semgrep/semgrep:latest",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/semgrep/semgrep"
+  },
+  "title": "Semgrep",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/semgrep/semgrep"
+}

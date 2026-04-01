@@ -1,0 +1,56 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Cloud browser automation for reliable web interactions and task execution.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/browserbase.png"
+    }
+  ],
+  "name": "io.qent.broxy/browserbase",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Browserbase API key",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "BROWSERBASE_API_KEY"
+        },
+        {
+          "description": "Browserbase project ID",
+          "isRequired": true,
+          "name": "BROWSERBASE_PROJECT_ID"
+        },
+        {
+          "description": "Google Gemini API key for Stagehand",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "GEMINI_API_KEY"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/npx/browserbase-mcp-server:2.4.3",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/browserbase/mcp-server-browserbase"
+  },
+  "title": "Browserbase",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/browserbase/mcp-server-browserbase"
+}

@@ -2,6 +2,30 @@
   "schemaVersion": 1,
   "servers": [
     {
+      "id": "aws-api",
+      "path": "servers/aws-api.json"
+    },
+    {
+      "id": "aws-diagram",
+      "path": "servers/aws-diagram.json"
+    },
+    {
+      "id": "aws-documentation",
+      "path": "servers/aws-documentation.json"
+    },
+    {
+      "id": "aws-knowledge",
+      "path": "servers/aws-knowledge.json"
+    },
+    {
+      "id": "aws-pricing",
+      "path": "servers/aws-pricing.json"
+    },
+    {
+      "id": "azure",
+      "path": "servers/azure.json"
+    },
+    {
       "id": "box",
       "path": "servers/box.json"
     },
@@ -10,12 +34,20 @@
       "path": "servers/brave.json"
     },
     {
+      "id": "browserbase",
+      "path": "servers/browserbase.json"
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "path": "servers/chrome-devtools-mcp.json"
+    },
+    {
       "id": "context7",
       "path": "servers/context7.json"
     },
     {
-      "id": "filesystem",
-      "path": "servers/filesystem.json"
+      "id": "database-toolbox",
+      "path": "servers/database-toolbox.json"
     },
     {
       "id": "dropbox",
@@ -26,8 +58,20 @@
       "path": "servers/exa.json"
     },
     {
+      "id": "filesystem",
+      "path": "servers/filesystem.json"
+    },
+    {
+      "id": "firecrawl",
+      "path": "servers/firecrawl.json"
+    },
+    {
       "id": "github",
       "path": "servers/github.json"
+    },
+    {
+      "id": "grafana",
+      "path": "servers/grafana.json"
     },
     {
       "id": "jetbrains",
@@ -38,8 +82,32 @@
       "path": "servers/linear.json"
     },
     {
+      "id": "mongodb",
+      "path": "servers/mongodb.json"
+    },
+    {
       "id": "notion",
       "path": "servers/notion.json"
+    },
+    {
+      "id": "perplexity-ask",
+      "path": "servers/perplexity-ask.json"
+    },
+    {
+      "id": "phoenix",
+      "path": "servers/phoenix.json"
+    },
+    {
+      "id": "playwright",
+      "path": "servers/playwright.json"
+    },
+    {
+      "id": "postgres-mcp-pro",
+      "path": "servers/postgres-mcp-pro.json"
+    },
+    {
+      "id": "semgrep",
+      "path": "servers/semgrep.json"
     },
     {
       "id": "slack",
@@ -48,6 +116,18 @@
     {
       "id": "stripe",
       "path": "servers/stripe.json"
+    },
+    {
+      "id": "supabase",
+      "path": "servers/supabase.json"
+    },
+    {
+      "id": "tavily-mcp",
+      "path": "servers/tavily-mcp.json"
+    },
+    {
+      "id": "terraform",
+      "path": "servers/terraform.json"
     },
     {
       "id": "time",

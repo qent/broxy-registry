@@ -1,0 +1,64 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Terraform registry and Cloud/Enterprise operations for modules, policies, and workspaces.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/terraform.png"
+    }
+  ],
+  "name": "io.qent.broxy/terraform",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "API authentication token for Terraform Cloud/Enterprise access",
+          "isSecret": true,
+          "name": "TFE_TOKEN"
+        },
+        {
+          "default": "https://app.terraform.io",
+          "description": "HCP Terraform/Enterprise endpoint URL",
+          "name": "TFE_ADDRESS"
+        },
+        {
+          "default": "false",
+          "description": "Enable destructive operations (use cautiously in production)",
+          "name": "ENABLE_TF_OPERATIONS"
+        },
+        {
+          "default": "false",
+          "description": "Bypass TLS certificate validation (development only)",
+          "name": "TFE_SKIP_TLS_VERIFY"
+        },
+        {
+          "default": "stdio",
+          "description": "Protocol selection (stdio or streamable-http)",
+          "name": "TRANSPORT_MODE"
+        }
+      ],
+      "identifier": "docker.io/hashicorp/terraform-mcp-server:0.4.0",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/hashicorp/terraform-mcp-server"
+  },
+  "title": "Terraform",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/hashicorp/terraform-mcp-server"
+}

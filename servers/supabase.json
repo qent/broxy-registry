@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Manage Supabase projects, tables, and data access from MCP-enabled clients.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/supabase.png"
+    }
+  ],
+  "name": "io.qent.broxy/supabase",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Personal access token from Supabase dashboard",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "SUPABASE_ACCESS_TOKEN"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/npx/supabase-mcp-server:0.7.0",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/supabase-community/supabase-mcp"
+  },
+  "title": "Supabase",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/supabase-community/supabase-mcp"
+}

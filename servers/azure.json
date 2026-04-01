@@ -1,0 +1,69 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Access Azure services and resources through MCP tools for cloud operations.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/azure.png"
+    }
+  ],
+  "name": "io.qent.broxy/azure",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "Your Azure tenant ID",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "AZURE_TENANT_ID"
+        },
+        {
+          "description": "Your Azure client ID for authentication",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "AZURE_CLIENT_ID"
+        },
+        {
+          "description": "Your Azure client secret for authentication",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "AZURE_CLIENT_SECRET"
+        },
+        {
+          "description": "HTTP proxy URL for outbound requests (optional)",
+          "name": "HTTP_PROXY"
+        },
+        {
+          "description": "HTTPS proxy URL for outbound requests (optional)",
+          "name": "HTTPS_PROXY"
+        },
+        {
+          "description": "Comma-separated list of hosts to exclude from proxying (optional)",
+          "name": "NO_PROXY"
+        }
+      ],
+      "identifier": "mcr.microsoft.com/azure-sdk/azure-mcp:1.0.4",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/Azure/azure-mcp"
+  },
+  "title": "Azure",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/Azure/azure-mcp"
+}

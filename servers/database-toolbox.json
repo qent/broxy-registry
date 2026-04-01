@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Unified database operations with connection pooling, authentication, and observability.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/database-toolbox.png"
+    }
+  ],
+  "name": "io.qent.broxy/database-toolbox",
+  "packages": [
+    {
+      "identifier": "us-central1-docker.pkg.dev/database-toolbox/toolbox/toolbox:0.31.0",
+      "registryType": "oci",
+      "transport": {
+        "type": "streamable-http",
+        "url": "http://localhost:5000"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/googleapis/genai-toolbox"
+  },
+  "title": "Database Toolbox",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/googleapis/genai-toolbox"
+}

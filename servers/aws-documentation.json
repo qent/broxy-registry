@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Search and read official AWS documentation with contextual discovery and recommendations.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/aws-documentation.png"
+    }
+  ],
+  "name": "io.qent.broxy/aws-documentation",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "default": "aws",
+          "description": "AWS documentation partition (aws, aws-cn)",
+          "name": "AWS_DOCUMENTATION_PARTITION"
+        },
+        {
+          "default": "ERROR",
+          "description": "Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
+          "name": "FASTMCP_LOG_LEVEL"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/uvx/aws-documentation:1.1.20",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/awslabs/mcp"
+  },
+  "title": "AWS Documentation",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/awslabs/mcp"
+}

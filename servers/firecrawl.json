@@ -1,0 +1,73 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Crawl websites and extract structured web content for AI and automation workflows.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/firecrawl.png"
+    }
+  ],
+  "name": "io.qent.broxy/firecrawl",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "API key for FireCrawl service authentication",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "FIRECRAWL_API_KEY"
+        },
+        {
+          "description": "FireCrawl API URL (default: https://api.firecrawl.dev/v1)",
+          "name": "FIRECRAWL_API_URL"
+        },
+        {
+          "description": "Maximum number of retry attempts for API calls",
+          "name": "FIRECRAWL_RETRY_MAX_ATTEMPTS"
+        },
+        {
+          "description": "Initial delay in milliseconds for retry backoff",
+          "name": "FIRECRAWL_RETRY_INITIAL_DELAY"
+        },
+        {
+          "description": "Maximum delay in milliseconds for retry backoff",
+          "name": "FIRECRAWL_RETRY_MAX_DELAY"
+        },
+        {
+          "description": "Backoff factor for retry delay calculation",
+          "name": "FIRECRAWL_RETRY_BACKOFF_FACTOR"
+        },
+        {
+          "description": "Credit threshold for warning notifications",
+          "name": "FIRECRAWL_CREDIT_WARNING_THRESHOLD"
+        },
+        {
+          "description": "Credit threshold for critical notifications",
+          "name": "FIRECRAWL_CREDIT_CRITICAL_THRESHOLD"
+        }
+      ],
+      "identifier": "docker.io/mcp/firecrawl:latest",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/firecrawl/firecrawl-mcp-server"
+  },
+  "title": "Firecrawl",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/firecrawl/firecrawl-mcp-server"
+}

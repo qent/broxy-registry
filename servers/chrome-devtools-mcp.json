@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Live Chrome debugging and inspection via DevTools for performance, network, and DOM analysis.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/chrome-devtools-mcp.png"
+    }
+  ],
+  "name": "io.qent.broxy/chrome-devtools-mcp",
+  "packages": [
+    {
+      "identifier": "ghcr.io/stacklok/dockyard/npx/chrome-devtools-mcp:0.20.0",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+  },
+  "title": "Chrome DevTools",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+}

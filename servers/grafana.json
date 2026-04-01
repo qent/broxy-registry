@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Dashboard discovery, datasource querying, and alert/incident support in Grafana.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/grafana.png"
+    }
+  ],
+  "name": "io.qent.broxy/grafana",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "URL of the Grafana instance to connect to",
+          "isRequired": true,
+          "name": "GRAFANA_URL"
+        },
+        {
+          "description": "Service account token with appropriate permissions",
+          "isRequired": true,
+          "isSecret": true,
+          "name": "GRAFANA_SERVICE_ACCOUNT_TOKEN"
+        },
+        {
+          "description": "Organization ID for multi-organization Grafana instances",
+          "name": "GRAFANA_ORG_ID"
+        }
+      ],
+      "identifier": "docker.io/grafana/mcp-grafana:0.11.3",
+      "registryType": "oci",
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:8000"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/grafana/mcp-grafana"
+  },
+  "title": "Grafana",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/grafana/mcp-grafana"
+}

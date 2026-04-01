@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "LLM observability platform for traces, evaluations, and application monitoring.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/phoenix.png"
+    }
+  ],
+  "name": "io.qent.broxy/phoenix",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "API key for Phoenix authentication",
+          "isSecret": true,
+          "name": "PHOENIX_API_KEY"
+        },
+        {
+          "default": "http://localhost:6006",
+          "description": "Base URL for Phoenix instance",
+          "name": "PHOENIX_BASE_URL"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/npx/phoenix-mcp:3.1.3",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/Arize-ai/phoenix"
+  },
+  "title": "Arize Phoenix",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/Arize-ai/phoenix"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Generate AWS architecture and flow diagrams from structured prompts and inputs.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/aws-diagram.png"
+    }
+  ],
+  "name": "io.qent.broxy/aws-diagram",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "default": "/tmp/diagrams",
+          "description": "Directory where diagrams will be saved",
+          "name": "OUTPUT_DIR"
+        },
+        {
+          "default": "ERROR",
+          "description": "Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
+          "name": "FASTMCP_LOG_LEVEL"
+        }
+      ],
+      "identifier": "ghcr.io/stacklok/dockyard/uvx/aws-diagram:1.0.23",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/awslabs/mcp"
+  },
+  "title": "AWS Diagrams",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/awslabs/mcp"
+}

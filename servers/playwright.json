@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Browser automation for navigation, interaction, screenshots, and end-to-end web workflows.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/playwright.png"
+    }
+  ],
+  "name": "io.qent.broxy/playwright",
+  "packages": [
+    {
+      "identifier": "mcr.microsoft.com/playwright/mcp:v0.0.70",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/microsoft/playwright-mcp"
+  },
+  "title": "Playwright",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/microsoft/playwright-mcp"
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  },
+  "description": "Estimate AWS service costs and compare pricing scenarios for planning decisions.",
+  "icons": [
+    {
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ],
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/aws-pricing.png"
+    }
+  ],
+  "name": "io.qent.broxy/aws-pricing",
+  "packages": [
+    {
+      "environmentVariables": [
+        {
+          "description": "AWS access key ID with access to the AWS Pricing API",
+          "isSecret": true,
+          "name": "AWS_ACCESS_KEY_ID"
+        },
+        {
+          "description": "AWS secret access key",
+          "isSecret": true,
+          "name": "AWS_SECRET_ACCESS_KEY"
+        },
+        {
+          "description": "AWS session token for temporary credentials",
+          "isSecret": true,
+          "name": "AWS_SESSION_TOKEN"
+        },
+        {
+          "default": "us-east-1",
+          "description": "AWS region for the Pricing API endpoint (us-east-1, eu-central-1, ap-southeast-1)",
+          "name": "AWS_REGION"
+        },
+        {
+          "default": "ERROR",
+          "description": "Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
+          "name": "FASTMCP_LOG_LEVEL"
+        }
+      ],
+      "identifier": "public.ecr.aws/f3y8w4n0/awslabs/aws-pricing-mcp-server:1.0.27",
+      "registryType": "oci",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/awslabs/mcp"
+  },
+  "title": "AWS Pricing",
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/awslabs/mcp"
+}
