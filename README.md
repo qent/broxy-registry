@@ -21,11 +21,11 @@ Reference format:
 │   ├── box.json
 │   ├── brave.json
 │   ├── context7.json
-│   ├── downloads-files.json
+│   ├── filesystem.json
 │   ├── dropbox.json
 │   ├── exa.json
 │   ├── github.json
-│   ├── intellij-idea-ce.json
+│   ├── jetbrains.json
 │   ├── linear.json
 │   ├── notion.json
 │   ├── slack.json
@@ -53,9 +53,9 @@ Reference format:
 
 | Catalog IDs | Source |
 |---|---|
-| `box`, `brave`, `dropbox`, `github`, `intellij-idea-ce`, `linear`, `notion`, `stripe`, `todoist`, `vercel` | `simple-icons` project (SVG logos): `https://github.com/simple-icons/simple-icons` |
+| `box`, `brave`, `dropbox`, `github`, `jetbrains`, `linear`, `notion`, `stripe`, `todoist`, `vercel` | `simple-icons` project (SVG logos): `https://github.com/simple-icons/simple-icons` |
 | `context7` | `upstash/context7` official icon: `https://raw.githubusercontent.com/upstash/context7/master/public/context7-icon.svg` |
-| `downloads-files` | Heroicons (`folder-arrow-down`): `https://raw.githubusercontent.com/tailwindlabs/heroicons/master/src/24/solid/folder-arrow-down.svg` |
+| `filesystem` | Heroicons (`folder`): `https://raw.githubusercontent.com/tailwindlabs/heroicons/master/src/24/solid/folder.svg` |
 | `time` | Heroicons (`clock`): `https://raw.githubusercontent.com/tailwindlabs/heroicons/master/src/24/solid/clock.svg` |
 | `slack` | Slack marketing asset (`400x400`): `https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png` |
 | `exa` | Exa homepage inline logomark SVG path (navbar logo): `https://exa.ai` |
@@ -70,8 +70,8 @@ Reference format:
 | `dropbox` | `io.qent.broxy/dropbox` | `remotes: streamable-http` | MCP OAuth flow |
 | `brave` | `io.qent.broxy/brave` | `packages: oci + stdio` | Required env `BRAVE_API_KEY` |
 | `exa` | `io.qent.broxy/exa` | `remotes: streamable-http` | No required template field |
-| `intellij-idea-ce` | `io.qent.broxy/intellij-idea-ce` | `remotes: sse` | Required header `IJ_MCP_SERVER_PROJECT_PATH` (`filepath`) |
-| `downloads-files` | `io.qent.broxy/downloads-files` | `packages: npm + stdio` | Required repeated positional `allowed_directory` (`filepath`) |
+| `jetbrains` | `io.qent.broxy/jetbrains` | `remotes: sse` | Required header `IJ_MCP_SERVER_PROJECT_PATH` (`filepath`) |
+| `filesystem` | `io.qent.broxy/filesystem` | `packages: npm + stdio` | Required repeated positional `allowed_directory` (`filepath`) |
 | `github` | `io.qent.broxy/github` | `remotes: streamable-http` | Required header `Authorization: Bearer {github_pat}` |
 | `linear` | `io.qent.broxy/linear` | `remotes: streamable-http` | MCP OAuth flow |
 | `notion` | `io.qent.broxy/notion` | `remotes: streamable-http` | OAuth flow on client side |

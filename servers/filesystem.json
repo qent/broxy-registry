@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.qent.broxy/downloads-files",
-  "title": "Downloads Filesystem",
-  "description": "Access and manage files in configured local directories.",
+  "name": "io.qent.broxy/filesystem",
+  "title": "Filesystem",
+  "description": "Access and manage files in one or more configured local directories.",
   "version": "2026.1.14",
   "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
   "repository": {
@@ -12,7 +12,7 @@
   },
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/downloads-files.png",
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/filesystem.png",
       "mimeType": "image/png",
       "sizes": [
         "128x128"
@@ -40,7 +40,7 @@
           "valueHint": "allowed_directory",
           "description": "Allowed directory path passed to filesystem server.",
           "format": "filepath",
-          "placeholder": "/Users/you/Downloads",
+          "placeholder": "/Users/you/Projects",
           "isRequired": true,
           "isRepeated": true
         }

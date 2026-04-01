@@ -14,8 +14,8 @@
       "path": "servers/context7.json"
     },
     {
-      "id": "downloads-files",
-      "path": "servers/downloads-files.json"
+      "id": "filesystem",
+      "path": "servers/filesystem.json"
     },
     {
       "id": "dropbox",
@@ -30,8 +30,8 @@
       "path": "servers/github.json"
     },
     {
-      "id": "intellij-idea-ce",
-      "path": "servers/intellij-idea-ce.json"
+      "id": "jetbrains",
+      "path": "servers/jetbrains.json"
     },
     {
       "id": "linear",

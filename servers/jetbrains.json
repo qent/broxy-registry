@@ -1,17 +1,13 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.qent.broxy/intellij-idea-ce",
-  "title": "IntelliJ IDEA CE",
-  "description": "Integrated development environment for writing, running, and debugging JVM applications.",
+  "name": "io.qent.broxy/jetbrains",
+  "title": "JetBrains",
+  "description": "Connect to JetBrains IDEs (IntelliJ IDEA, WebStorm, PyCharm, GoLand, and others).",
   "version": "2026.1",
   "websiteUrl": "https://www.jetbrains.com/help/idea/mcp-server.html",
-  "repository": {
-    "source": "npm",
-    "url": "https://www.npmjs.com/package/@jetbrains/mcp-proxy"
-  },
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/intellij-idea-ce.png",
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/jetbrains.png",
       "mimeType": "image/png",
       "sizes": [
         "128x128"
@@ -25,13 +21,13 @@
       "headers": [
         {
           "name": "IJ_MCP_SERVER_PROJECT_PATH",
-          "description": "Absolute path to the project opened in IntelliJ IDEA.",
+          "description": "Absolute path to the project opened in a JetBrains IDE.",
           "value": "{project_path}",
           "isRequired": true,
           "isSecret": false,
           "variables": {
             "project_path": {
-              "description": "Absolute project path for IntelliJ MCP context.",
+              "description": "Absolute project path for JetBrains MCP context.",
               "format": "filepath",
               "placeholder": "/Users/you/Repos/project",
               "isRequired": true
