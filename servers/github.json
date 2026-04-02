@@ -37,6 +37,13 @@
     }
   ],
   "_meta": {
+    "install_steps": [
+      "Open your **GitHub** [Developer Settings](https://github.com/settings/apps).",
+      "Select [Tokens (classic)](https://github.com/settings/tokens) from **Personal access tokens**.",
+      "Click [Generate new token (classic)](https://github.com/settings/tokens/new) from **Generate new token** selector.",
+      "Fill **New personal access token (classic)** form and submit with the **Generate token** button.",
+      "Use created token below [Authorization]"
+    ],
     "io.qent.broxy/catalog": {
       "capabilities": [
         "tools",
