@@ -20,6 +20,18 @@
   "name": "io.qent.broxy/tavily-mcp",
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "tavily-mcp@latest",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "API key for Tavily search service",
@@ -27,12 +39,7 @@
           "isSecret": true,
           "name": "TAVILY_API_KEY"
         }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/npx/tavily-mcp:0.2.18",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

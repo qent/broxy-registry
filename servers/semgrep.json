@@ -20,18 +20,19 @@
   "name": "io.qent.broxy/semgrep",
   "packages": [
     {
+      "registryType": "pypi",
+      "identifier": "semgrep-mcp",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "description": "Token for connecting to Semgrep AppSec Platform",
           "isSecret": true,
           "name": "SEMGREP_APP_TOKEN"
         }
-      ],
-      "identifier": "semgrep/semgrep:latest",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

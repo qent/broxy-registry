@@ -20,23 +20,59 @@
   ],
   "packages": [
     {
-      "environmentVariables": [
-        {
-          "default": "http://localhost:8000",
-          "description": "ChromaDB server URL",
-          "name": "CHROMA_SERVER_URL"
-        },
-        {
-          "description": "API key for ChromaDB authentication",
-          "isSecret": true,
-          "name": "CHROMA_API_KEY"
-        }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/uvx/chroma-mcp:0.2.6",
-      "registryType": "oci",
+      "registryType": "pypi",
+      "identifier": "chroma-mcp",
+      "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
-      }
+      },
+      "environmentVariables": [
+        {
+          "name": "CHROMA_CLIENT_TYPE",
+          "description": "Client type: http, cloud, persistent, or ephemeral.",
+          "default": "http"
+        },
+        {
+          "name": "CHROMA_HOST",
+          "description": "Host for self-hosted Chroma HTTP client."
+        },
+        {
+          "name": "CHROMA_PORT",
+          "description": "Port for self-hosted Chroma HTTP client."
+        },
+        {
+          "name": "CHROMA_SSL",
+          "description": "Enable SSL for HTTP client.",
+          "default": "true"
+        },
+        {
+          "name": "CHROMA_API_KEY",
+          "description": "API key for Chroma Cloud or configured auth.",
+          "isSecret": true
+        },
+        {
+          "name": "CHROMA_TENANT",
+          "description": "Tenant for Chroma Cloud client."
+        },
+        {
+          "name": "CHROMA_DATABASE",
+          "description": "Database for Chroma Cloud client."
+        },
+        {
+          "name": "CHROMA_DATA_DIR",
+          "description": "Data directory for persistent client."
+        },
+        {
+          "name": "CHROMA_CUSTOM_AUTH_CREDENTIALS",
+          "description": "Custom auth credentials for HTTP client.",
+          "isSecret": true
+        },
+        {
+          "name": "CHROMA_DOTENV_PATH",
+          "description": "Optional path to .env file used by chroma-mcp.",
+          "format": "filepath"
+        }
+      ]
     }
   ],
   "_meta": {

@@ -20,6 +20,18 @@
   "name": "io.qent.broxy/mongodb",
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "mongodb-mcp-server@latest",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "MongoDB connection string for direct database connections (optional, if not set, you'll need to call the connect tool before interacting with MongoDB data)",
@@ -37,18 +49,6 @@
           "name": "MDB_MCP_API_CLIENT_SECRET"
         },
         {
-          "description": "Atlas API base URL (default is https://cloud.mongodb.com/)",
-          "name": "MDB_MCP_API_BASE_URL"
-        },
-        {
-          "description": "MongoDB server address for direct connections (optional, used for connect tool)",
-          "name": "MDB_MCP_SERVER_ADDRESS"
-        },
-        {
-          "description": "MongoDB server port for direct connections (optional, used for connect tool)",
-          "name": "MDB_MCP_SERVER_PORT"
-        },
-        {
           "description": "Folder to store logs (inside the container)",
           "name": "MDB_MCP_LOG_PATH"
         },
@@ -64,12 +64,7 @@
           "description": "When set to disabled, disables telemetry collection",
           "name": "MDB_MCP_TELEMETRY"
         }
-      ],
-      "identifier": "docker.io/mongodb/mongodb-mcp-server:1.9.0",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

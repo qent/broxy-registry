@@ -20,6 +20,18 @@
   "name": "io.qent.broxy/browserbase",
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "@browserbasehq/mcp",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "Browserbase API key",
@@ -38,12 +50,7 @@
           "isSecret": true,
           "name": "GEMINI_API_KEY"
         }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/npx/browserbase-mcp-server:2.4.3",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

@@ -20,6 +20,66 @@
   "name": "io.qent.broxy/terraform",
   "packages": [
     {
+      "registryType": "docker",
+      "identifier": "hashicorp/terraform-mcp-server:0.5.0",
+      "runtimeHint": "docker",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "run"
+        },
+        {
+          "type": "positional",
+          "value": "-i"
+        },
+        {
+          "type": "positional",
+          "value": "--rm"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "TFE_TOKEN"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "TFE_ADDRESS"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "ENABLE_TF_OPERATIONS"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "TFE_SKIP_TLS_VERIFY"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "TRANSPORT_MODE"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "API authentication token for Terraform Cloud/Enterprise access",
@@ -46,12 +106,7 @@
           "description": "Protocol selection (stdio or streamable-http)",
           "name": "TRANSPORT_MODE"
         }
-      ],
-      "identifier": "docker.io/hashicorp/terraform-mcp-server:0.4.0",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

@@ -42,6 +42,8 @@ Reference format:
 - `index.json` uses `schemaVersion: 1` and `servers[].path` references.
 - Each server `name` is strict schema style: `io.qent.broxy/<id>`.
 - This repo stores only **safe templates**. No real tokens, PATs, local private paths, or secrets.
+- `packages[*].registryType: "oci"` is not used in this registry.
+- For local server execution, Docker is represented as a standard `stdio` runtime (`runtimeHint: "docker"`) when it is the official setup path.
 - Icons are stored as PNG (`128x128`) and referenced via:
   - `https://raw.githubusercontent.com/qent/broxy-registry/main/icons/<file>.png`
 
@@ -68,7 +70,7 @@ Reference format:
 | `box` | `io.qent.broxy/box` | `remotes: streamable-http` | MCP OAuth flow |
 | `todoist` | `io.qent.broxy/todoist` | `remotes: streamable-http` | OAuth flow on client side |
 | `dropbox` | `io.qent.broxy/dropbox` | `remotes: streamable-http` | MCP OAuth flow |
-| `brave` | `io.qent.broxy/brave` | `packages: oci + stdio` | Required env `BRAVE_API_KEY` |
+| `brave` | `io.qent.broxy/brave` | `packages: npm + stdio` | Required env `BRAVE_API_KEY` |
 | `exa` | `io.qent.broxy/exa` | `remotes: streamable-http` | No required template field |
 | `jetbrains` | `io.qent.broxy/jetbrains` | `remotes: sse` | Required header `IJ_MCP_SERVER_PROJECT_PATH` (`filepath`) |
 | `filesystem` | `io.qent.broxy/filesystem` | `packages: npm + stdio` | Required repeated positional `allowed_directory` (`filepath`) |

@@ -20,11 +20,18 @@
   "name": "io.qent.broxy/chrome-devtools-mcp",
   "packages": [
     {
-      "identifier": "ghcr.io/stacklok/dockyard/npx/chrome-devtools-mcp:0.20.0",
-      "registryType": "oci",
+      "registryType": "npm",
+      "identifier": "chrome-devtools-mcp@latest",
+      "runtimeHint": "npx",
       "transport": {
         "type": "stdio"
-      }
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ]
     }
   ],
   "repository": {

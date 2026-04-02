@@ -20,6 +20,18 @@
   ],
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "graphlit-mcp-server",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "Your Graphlit environment ID",
@@ -90,12 +102,7 @@
           "isSecret": true,
           "name": "NOTION_API_KEY"
         }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/npx/graphlit-mcp-server:1.0.20260112001",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "_meta": {

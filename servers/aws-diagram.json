@@ -20,23 +20,19 @@
   "name": "io.qent.broxy/aws-diagram",
   "packages": [
     {
+      "registryType": "pypi",
+      "identifier": "awslabs.aws-diagram-mcp-server",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
-        {
-          "default": "/tmp/diagrams",
-          "description": "Directory where diagrams will be saved",
-          "name": "OUTPUT_DIR"
-        },
         {
           "default": "ERROR",
           "description": "Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
           "name": "FASTMCP_LOG_LEVEL"
         }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/uvx/aws-diagram:1.0.23",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

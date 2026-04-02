@@ -20,12 +20,29 @@
   "name": "io.qent.broxy/database-toolbox",
   "packages": [
     {
-      "identifier": "us-central1-docker.pkg.dev/database-toolbox/toolbox/toolbox:0.31.0",
-      "registryType": "oci",
+      "registryType": "npm",
+      "identifier": "@toolbox-sdk/server",
+      "runtimeHint": "npx",
       "transport": {
-        "type": "streamable-http",
-        "url": "http://localhost:5000"
-      }
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "named",
+          "name": "--config",
+          "valueHint": "tools_yaml_path",
+          "description": "Path to Toolbox configuration YAML file.",
+          "format": "filepath",
+          "placeholder": "/path/to/tools.yaml",
+          "isRequired": true
+        }
+      ]
     }
   ],
   "repository": {

@@ -18,28 +18,25 @@
       ]
     }
   ],
-  "packages": [
-    {
-      "environmentVariables": [
-        {
-          "description": "API key for Neon database service",
-          "isRequired": true,
-          "isSecret": true,
-          "name": "NEON_API_KEY"
-        }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/npx/mcp-server-neon:0.6.5",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
-    }
-  ],
   "_meta": {
     "io.qent.broxy/catalog": {
       "capabilities": [
         "tools"
       ]
     }
-  }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.neon.tech/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional Neon API token in format: Bearer <token>.",
+          "placeholder": "Bearer <neon_api_key>",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
 }

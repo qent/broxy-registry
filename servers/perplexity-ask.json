@@ -20,6 +20,18 @@
   "name": "io.qent.broxy/perplexity-ask",
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "@perplexity-ai/mcp-server",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "Perplexity API key",
@@ -27,12 +39,7 @@
           "isSecret": true,
           "name": "PERPLEXITY_API_KEY"
         }
-      ],
-      "identifier": "docker.io/mcp/perplexity-ask:latest",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

@@ -21,33 +21,16 @@
   ],
   "packages": [
     {
-      "registryType": "oci",
-      "identifier": "docker.io/mcp/brave-search",
-      "version": "0.6.2",
-      "runtimeHint": "docker",
+      "registryType": "npm",
+      "identifier": "@modelcontextprotocol/server-brave-search",
+      "runtimeHint": "npx",
       "transport": {
         "type": "stdio"
       },
       "runtimeArguments": [
         {
           "type": "positional",
-          "value": "run"
-        },
-        {
-          "type": "positional",
-          "value": "-i"
-        },
-        {
-          "type": "positional",
-          "value": "--rm"
-        },
-        {
-          "type": "positional",
-          "value": "-e"
-        },
-        {
-          "type": "positional",
-          "value": "BRAVE_API_KEY"
+          "value": "-y"
         }
       ],
       "environmentVariables": [

@@ -20,8 +20,9 @@
   "name": "io.qent.broxy/playwright",
   "packages": [
     {
-      "identifier": "mcr.microsoft.com/playwright/mcp:v0.0.70",
-      "registryType": "oci",
+      "registryType": "npm",
+      "identifier": "@playwright/mcp@latest",
+      "runtimeHint": "npx",
       "transport": {
         "type": "stdio"
       }

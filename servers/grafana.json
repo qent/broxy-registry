@@ -20,6 +20,12 @@
   "name": "io.qent.broxy/grafana",
   "packages": [
     {
+      "registryType": "pypi",
+      "identifier": "mcp-grafana",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "description": "URL of the Grafana instance to connect to",
@@ -36,13 +42,7 @@
           "description": "Organization ID for multi-organization Grafana instances",
           "name": "GRAFANA_ORG_ID"
         }
-      ],
-      "identifier": "docker.io/grafana/mcp-grafana:0.11.3",
-      "registryType": "oci",
-      "transport": {
-        "type": "sse",
-        "url": "http://localhost:8000"
-      }
+      ]
     }
   ],
   "repository": {

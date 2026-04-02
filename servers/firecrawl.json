@@ -20,6 +20,18 @@
   "name": "io.qent.broxy/firecrawl",
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "firecrawl-mcp",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "API key for FireCrawl service authentication",
@@ -55,12 +67,7 @@
           "description": "Credit threshold for critical notifications",
           "name": "FIRECRAWL_CREDIT_CRITICAL_THRESHOLD"
         }
-      ],
-      "identifier": "docker.io/mcp/firecrawl:latest",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

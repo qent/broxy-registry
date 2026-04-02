@@ -20,67 +20,32 @@
   ],
   "packages": [
     {
-      "environmentVariables": [
-        {
-          "description": "Redis IP or hostname (default \"127.0.0.1\")",
-          "isRequired": true,
-          "name": "REDIS_HOST"
-        },
-        {
-          "description": "Redis port (default 6379)",
-          "name": "REDIS_PORT"
-        },
-        {
-          "description": "Redis database number (default 0)",
-          "name": "REDIS_DB"
-        },
-        {
-          "description": "Redis username (default \"default\")",
-          "name": "REDIS_USERNAME"
-        },
-        {
-          "description": "Redis password (default empty)",
-          "isSecret": true,
-          "name": "REDIS_PWD"
-        },
-        {
-          "description": "Redis TLS connection (True|False, default False)",
-          "name": "REDIS_SSL"
-        },
-        {
-          "description": "CA certificate for verifying server",
-          "name": "REDIS_CA_PATH"
-        },
-        {
-          "description": "Client's private key file for client authentication",
-          "name": "REDIS_SSL_KEYFILE"
-        },
-        {
-          "description": "Client's certificate file for client authentication",
-          "name": "REDIS_SSL_CERTFILE"
-        },
-        {
-          "description": "Whether the client should verify the server's certificate (default \"required\")",
-          "name": "REDIS_CERT_REQS"
-        },
-        {
-          "description": "Path to the trusted CA certificates file",
-          "name": "REDIS_CA_CERTS"
-        },
-        {
-          "description": "Enable Redis Cluster mode (True|False, default False)",
-          "name": "REDIS_CLUSTER_MODE"
-        },
-        {
-          "description": "Use the stdio or sse transport (default stdio)",
-          "name": "MCP_TRANSPORT"
-        }
-      ],
-      "identifier": "docker.io/mcp/redis:latest",
-      "registryType": "oci",
+      "registryType": "pypi",
+      "identifier": "redis-mcp-server@latest",
+      "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
-      }
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "--from"
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "redis-mcp-server"
+        },
+        {
+          "type": "named",
+          "name": "--url",
+          "valueHint": "redis_url",
+          "description": "Redis connection URL.",
+          "placeholder": "redis://localhost:6379/0",
+          "isRequired": true
+        }
+      ]
     }
   ],
   "_meta": {

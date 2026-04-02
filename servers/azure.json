@@ -20,6 +20,28 @@
   "name": "io.qent.broxy/azure",
   "packages": [
     {
+      "registryType": "npm",
+      "identifier": "@azure/mcp@latest",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "server"
+        },
+        {
+          "type": "positional",
+          "value": "start"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "Your Azure tenant ID",
@@ -38,30 +60,14 @@
           "isRequired": true,
           "isSecret": true,
           "name": "AZURE_CLIENT_SECRET"
-        },
-        {
-          "description": "HTTP proxy URL for outbound requests (optional)",
-          "name": "HTTP_PROXY"
-        },
-        {
-          "description": "HTTPS proxy URL for outbound requests (optional)",
-          "name": "HTTPS_PROXY"
-        },
-        {
-          "description": "Comma-separated list of hosts to exclude from proxying (optional)",
-          "name": "NO_PROXY"
         }
-      ],
-      "identifier": "mcr.microsoft.com/azure-sdk/azure-mcp:1.0.4",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {
     "source": "github",
-    "url": "https://github.com/Azure/azure-mcp"
+    "url": "https://github.com/microsoft/mcp",
+    "subfolder": "servers/Azure.Mcp.Server"
   },
   "title": "Azure",
   "version": "1.0.0",

@@ -20,6 +20,18 @@
   "name": "io.qent.broxy/postgres-mcp-pro",
   "packages": [
     {
+      "registryType": "pypi",
+      "identifier": "postgres-mcp",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "--access-mode=unrestricted"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "PostgreSQL connection string, like 'postgresql://username:password@host.docker.internal:5432/dbname'",
@@ -32,13 +44,7 @@
           "isSecret": true,
           "name": "OPENAI_API_KEY"
         }
-      ],
-      "identifier": "crystaldba/postgres-mcp:0.3.0",
-      "registryType": "oci",
-      "transport": {
-        "type": "sse",
-        "url": "http://localhost:8000"
-      }
+      ]
     }
   ],
   "repository": {

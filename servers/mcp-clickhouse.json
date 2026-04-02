@@ -20,6 +20,34 @@
   ],
   "packages": [
     {
+      "registryType": "pypi",
+      "identifier": "mcp-clickhouse",
+      "runtimeHint": "uv",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "run"
+        },
+        {
+          "type": "positional",
+          "value": "--with"
+        },
+        {
+          "type": "positional",
+          "value": "mcp-clickhouse"
+        },
+        {
+          "type": "positional",
+          "value": "--python"
+        },
+        {
+          "type": "positional",
+          "value": "3.10"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "The hostname of your ClickHouse server",
@@ -66,12 +94,7 @@
           "description": "The path to the chDB data directory",
           "name": "CHDB_DATA_PATH"
         }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/uvx/mcp-clickhouse:0.2.0",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "_meta": {

@@ -20,6 +20,72 @@
   ],
   "packages": [
     {
+      "registryType": "docker",
+      "identifier": "docker.elastic.co/mcp/elasticsearch",
+      "runtimeHint": "docker",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "run"
+        },
+        {
+          "type": "positional",
+          "value": "-i"
+        },
+        {
+          "type": "positional",
+          "value": "--rm"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "ES_URL"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "ES_API_KEY"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "ES_USERNAME"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "ES_PASSWORD"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "ES_SSL_SKIP_VERIFY"
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "stdio"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "Your Elasticsearch instance URL",
@@ -41,28 +107,10 @@
           "name": "ES_PASSWORD"
         },
         {
-          "description": "Path to custom CA certificate for Elasticsearch SSL/TLS",
-          "name": "ES_CA_CERT"
-        },
-        {
           "description": "Set to '1' or 'true' to skip SSL certificate verification",
           "name": "ES_SSL_SKIP_VERIFY"
-        },
-        {
-          "description": "Path prefix for Elasticsearch instance exposed at a non-root path",
-          "name": "ES_PATH_PREFIX"
-        },
-        {
-          "description": "Server assumes Elasticsearch 9.x. Set to 8 target Elasticsearch 8.x",
-          "name": "ES_VERSION"
         }
-      ],
-      "identifier": "docker.elastic.co/mcp/elasticsearch:0.4.6",
-      "registryType": "oci",
-      "transport": {
-        "type": "streamable-http",
-        "url": "http://localhost:8080"
-      }
+      ]
     }
   ],
   "_meta": {

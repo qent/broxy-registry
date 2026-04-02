@@ -20,6 +20,74 @@
   ],
   "packages": [
     {
+      "registryType": "docker",
+      "identifier": "mcp/sonarqube:latest",
+      "runtimeHint": "docker",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "run"
+        },
+        {
+          "type": "positional",
+          "value": "--init"
+        },
+        {
+          "type": "positional",
+          "value": "--pull=always"
+        },
+        {
+          "type": "positional",
+          "value": "-i"
+        },
+        {
+          "type": "positional",
+          "value": "--rm"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "SONARQUBE_TOKEN"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "SONARQUBE_ORG"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "SONARQUBE_URL"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "SONARQUBE_TOOLSETS"
+        },
+        {
+          "type": "positional",
+          "value": "-e"
+        },
+        {
+          "type": "positional",
+          "value": "SONARQUBE_READ_ONLY"
+        }
+      ],
       "environmentVariables": [
         {
           "description": "SonarQube user auth token with necessary scopes",
@@ -43,12 +111,7 @@
           "description": "Set to \"true\" to disable all write operations",
           "name": "SONARQUBE_READ_ONLY"
         }
-      ],
-      "identifier": "docker.io/mcp/sonarqube:latest",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "_meta": {

@@ -20,6 +20,12 @@
   "name": "io.qent.broxy/aws-documentation",
   "packages": [
     {
+      "registryType": "pypi",
+      "identifier": "awslabs.aws-documentation-mcp-server@latest",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "default": "aws",
@@ -31,12 +37,7 @@
           "description": "Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
           "name": "FASTMCP_LOG_LEVEL"
         }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/uvx/aws-documentation:1.1.20",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
+      ]
     }
   ],
   "repository": {

@@ -18,28 +18,17 @@
     }
   ],
   "name": "io.qent.broxy/supabase",
-  "packages": [
-    {
-      "environmentVariables": [
-        {
-          "description": "Personal access token from Supabase dashboard",
-          "isRequired": true,
-          "isSecret": true,
-          "name": "SUPABASE_ACCESS_TOKEN"
-        }
-      ],
-      "identifier": "ghcr.io/stacklok/dockyard/npx/supabase-mcp-server:0.7.0",
-      "registryType": "oci",
-      "transport": {
-        "type": "stdio"
-      }
-    }
-  ],
   "repository": {
     "source": "github",
     "url": "https://github.com/supabase-community/supabase-mcp"
   },
   "title": "Supabase",
   "version": "1.0.0",
-  "websiteUrl": "https://github.com/supabase-community/supabase-mcp"
+  "websiteUrl": "https://github.com/supabase-community/supabase-mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.supabase.com/mcp"
+    }
+  ]
 }
