@@ -97,10 +97,12 @@
         },
         {
           "description": "SonarQube Server base URL (required for self-hosted instances)",
+          "isRequired": true,
           "name": "SONARQUBE_URL"
         },
         {
           "description": "SonarQube Cloud organization key (required for SonarQube Cloud)",
+          "isRequired": true,
           "name": "SONARQUBE_ORG"
         },
         {

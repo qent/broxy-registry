@@ -34,10 +34,6 @@
       "path": "servers/brave.json"
     },
     {
-      "id": "browserbase",
-      "path": "servers/browserbase.json"
-    },
-    {
       "id": "chroma-mcp",
       "path": "servers/chroma-mcp.json"
     },
@@ -52,10 +48,6 @@
     {
       "id": "context7",
       "path": "servers/context7.json"
-    },
-    {
-      "id": "database-toolbox",
-      "path": "servers/database-toolbox.json"
     },
     {
       "id": "dropbox",
@@ -110,10 +102,6 @@
       "path": "servers/monday.json"
     },
     {
-      "id": "mongodb",
-      "path": "servers/mongodb.json"
-    },
-    {
       "id": "notion",
       "path": "servers/notion.json"
     },
@@ -136,10 +124,6 @@
     {
       "id": "redis",
       "path": "servers/redis.json"
-    },
-    {
-      "id": "semgrep",
-      "path": "servers/semgrep.json"
     },
     {
       "id": "sentry",

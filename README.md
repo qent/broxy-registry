@@ -81,3 +81,59 @@ jq . servers/*.json
 npx -y ajv-cli validate --strict=false -s /tmp/server.schema.json -d "servers/*.json"
 for f in icons/*.png; do sips -g pixelWidth -g pixelHeight "$f"; done
 ```
+
+## Runtime availability check
+
+Use the Python checker to verify that every configured MCP target in `servers/*.json` is reachable:
+
+```bash
+python scripts/check_mcp_servers.py
+```
+
+Install dependencies if needed:
+
+```bash
+pip install mcp httpx
+```
+
+CLI options:
+
+- `--env-file` (default: `.env`) - file (`KEY=VALUE`) with secrets and required inputs.
+- `--servers-dir` (default: `servers`) - directory with server JSON files.
+- `--only` (repeatable) - filter by `io.qent.broxy/<id>` or `<id>`.
+- `--concurrency` (default: `4`) - max parallel target checks.
+- `--startup-timeout` (default: `300`) - per-target startup timeout in seconds.
+- `--rpc-timeout` (default: `300`) - per-MCP call timeout in seconds.
+- `--http-timeout` (default: `300`) - HTTP timeout in seconds.
+- `--report-json` - optional path for JSON report output.
+- `--analysis-md` - optional path for markdown failure analysis output.
+
+Value resolution order:
+
+1. `.env`
+2. current process environment
+3. `value`/`default` from server JSON
+
+Target statuses:
+
+- `pass` - MCP initialize and capability probes succeeded.
+- `pass_oauth_challenge` - remote-only server returned OAuth challenge and exposed client registration support (DCR/CIMD metadata).
+- `fail` - missing runtime/inputs, startup failure, handshake failure, or invalid config.
+
+Exit codes:
+
+- `0` - only `pass` and/or `pass_oauth_challenge`
+- `1` - at least one `fail`
+
+Examples:
+
+```bash
+# check a single server
+python scripts/check_mcp_servers.py --only io.qent.broxy/time
+
+# run with custom input file and save report
+python scripts/check_mcp_servers.py --env-file .env --report-json /tmp/mcp-check-report.json
+
+# run and save markdown failure analysis
+python scripts/check_mcp_servers.py --analysis-md /tmp/mcp-failures.md
+```

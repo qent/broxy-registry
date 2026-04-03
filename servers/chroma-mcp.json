@@ -34,7 +34,8 @@
         },
         {
           "name": "CHROMA_HOST",
-          "description": "Host for self-hosted Chroma HTTP client."
+          "description": "Host for self-hosted Chroma HTTP client (required for default HTTP mode).",
+          "isRequired": true
         },
         {
           "name": "CHROMA_PORT",

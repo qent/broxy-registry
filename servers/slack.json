@@ -17,7 +17,33 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.slack.com/mcp"
+      "url": "https://mcp.slack.com/mcp",
+      "headers": [
+        {
+          "name": "clientId",
+          "description": "OAuth client ID required by backend for Slack MCP authorization.",
+          "value": "{slack_client_id}",
+          "isRequired": true,
+          "variables": {
+            "slack_client_id": {
+              "description": "OAuth client ID for Slack MCP.",
+              "isRequired": true
+            }
+          }
+        },
+        {
+          "name": "clientIdMetadataUrl",
+          "description": "OAuth client metadata URL required by backend when dynamic client registration is unavailable.",
+          "value": "{slack_client_id_metadata_url}",
+          "isRequired": true,
+          "variables": {
+            "slack_client_id_metadata_url": {
+              "description": "URL to OAuth client metadata document for Slack MCP.",
+              "isRequired": true
+            }
+          }
+        }
+      ]
     }
   ],
   "_meta": {

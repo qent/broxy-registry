@@ -17,7 +17,33 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.box.com"
+      "url": "https://mcp.box.com",
+      "headers": [
+        {
+          "name": "clientId",
+          "description": "OAuth client ID required by backend for Box MCP authorization.",
+          "value": "{box_client_id}",
+          "isRequired": true,
+          "variables": {
+            "box_client_id": {
+              "description": "OAuth client ID for Box MCP.",
+              "isRequired": true
+            }
+          }
+        },
+        {
+          "name": "clientIdMetadataUrl",
+          "description": "OAuth client metadata URL required by backend when dynamic client registration is unavailable.",
+          "value": "{box_client_id_metadata_url}",
+          "isRequired": true,
+          "variables": {
+            "box_client_id_metadata_url": {
+              "description": "URL to OAuth client metadata document for Box MCP.",
+              "isRequired": true
+            }
+          }
+        }
+      ]
     }
   ],
   "_meta": {
