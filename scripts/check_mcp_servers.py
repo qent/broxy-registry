@@ -852,6 +852,11 @@ def mcp_initialize_payload() -> dict[str, Any]:
     }
 
 
+def has_explicit_oauth_client_config(headers: dict[str, str]) -> bool:
+    normalized = {str(key).strip().lower(): str(value).strip() for key, value in headers.items()}
+    return bool(normalized.get("clientid")) and bool(normalized.get("clientidmetadataurl"))
+
+
 async def probe_oauth_challenge(
     transport: str,
     url: str,
@@ -944,6 +949,11 @@ async def check_remote_target(
                 if oauth_analysis.status == "registration_supported":
                     return STATUS_PASS_OAUTH, oauth_analysis.detail
                 if oauth_analysis.status == "registration_unavailable":
+                    if has_explicit_oauth_client_config(headers):
+                        return (
+                            STATUS_PASS_OAUTH,
+                            "oauth challenge detected; explicit clientId/clientIdMetadataUrl provided",
+                        )
                     return STATUS_FAIL, oauth_analysis.detail
                 return STATUS_FAIL, oauth_analysis.detail
         return STATUS_FAIL, f"remote check failed: {format_exception(exc)}"
