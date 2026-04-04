@@ -41,26 +41,6 @@
           "type": "positional",
           "value": "start"
         }
-      ],
-      "environmentVariables": [
-        {
-          "description": "Your Azure tenant ID",
-          "isRequired": true,
-          "isSecret": true,
-          "name": "AZURE_TENANT_ID"
-        },
-        {
-          "description": "Your Azure client ID for authentication",
-          "isRequired": true,
-          "isSecret": true,
-          "name": "AZURE_CLIENT_ID"
-        },
-        {
-          "description": "Your Azure client secret for authentication",
-          "isRequired": true,
-          "isSecret": true,
-          "name": "AZURE_CLIENT_SECRET"
-        }
       ]
     }
   ],
@@ -71,5 +51,5 @@
   },
   "title": "Azure",
   "version": "1.0.0",
-  "websiteUrl": "https://github.com/Azure/azure-mcp"
+  "websiteUrl": "https://github.com/microsoft/mcp/tree/main/servers/Azure.Mcp.Server"
 }
