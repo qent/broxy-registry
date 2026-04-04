@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/apify",
+  "title": "Apify",
+  "description": "MCP access to Apify Actors, datasets, and docs for web automation and data extraction.",
+  "version": "latest",
+  "websiteUrl": "https://docs.apify.com/platform/integrations/mcp",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/apify.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com",
+      "oauth": {
+        "type": "oauth",
+        "allowDynamicRegistration": true
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

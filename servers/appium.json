@@ -1,0 +1,58 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/appium",
+  "title": "Appium",
+  "description": "Mobile automation MCP server for Android and iOS testing via Appium sessions and device tools.",
+  "version": "latest",
+  "websiteUrl": "https://github.com/appium/appium-mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/appium/appium-mcp"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/appium.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "appium-mcp@latest",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "ANDROID_HOME",
+          "description": "Android SDK root path for Android device automation."
+        },
+        {
+          "name": "CAPABILITIES_CONFIG",
+          "description": "Path to capabilities JSON used to initialize Appium sessions."
+        },
+        {
+          "name": "SCREENSHOTS_DIR",
+          "description": "Directory where screenshots are written by the server."
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

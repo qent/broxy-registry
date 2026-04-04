@@ -2,6 +2,14 @@
   "schemaVersion": 1,
   "servers": [
     {
+      "id": "apify",
+      "path": "servers/apify.json"
+    },
+    {
+      "id": "appium",
+      "path": "servers/appium.json"
+    },
+    {
       "id": "asana",
       "path": "servers/asana.json"
     },
@@ -74,6 +82,10 @@
       "path": "servers/filesystem.json"
     },
     {
+      "id": "firebase",
+      "path": "servers/firebase.json"
+    },
+    {
       "id": "firecrawl",
       "path": "servers/firecrawl.json"
     },
@@ -110,6 +122,10 @@
       "path": "servers/miro.json"
     },
     {
+      "id": "n8n",
+      "path": "servers/n8n.json"
+    },
+    {
       "id": "notion",
       "path": "servers/notion.json"
     },
@@ -132,6 +148,10 @@
     {
       "id": "postgres-mcp-pro",
       "path": "servers/postgres-mcp-pro.json"
+    },
+    {
+      "id": "postman",
+      "path": "servers/postman.json"
     },
     {
       "id": "redis",
@@ -176,6 +196,6 @@
     {
       "id": "zapier",
       "path": "servers/zapier.json"
-     }
+    }
   ]
 }

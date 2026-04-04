@@ -1,0 +1,70 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/n8n",
+  "title": "n8n",
+  "description": "MCP server for n8n node documentation with optional n8n instance management tools.",
+  "version": "latest",
+  "websiteUrl": "https://github.com/czlonkowski/n8n-mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/czlonkowski/n8n-mcp"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/n8n.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "n8n-mcp@latest",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "MCP_MODE",
+          "description": "Transport mode expected by desktop MCP clients.",
+          "default": "stdio"
+        },
+        {
+          "name": "LOG_LEVEL",
+          "description": "Server log verbosity level.",
+          "default": "error"
+        },
+        {
+          "name": "DISABLE_CONSOLE_OUTPUT",
+          "description": "Suppress non-protocol console output to avoid stdio parsing issues.",
+          "default": "true"
+        },
+        {
+          "name": "N8N_API_URL",
+          "description": "Optional n8n instance URL to enable workflow-management tools."
+        },
+        {
+          "name": "N8N_API_KEY",
+          "description": "Optional n8n API key for authenticated management operations.",
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
