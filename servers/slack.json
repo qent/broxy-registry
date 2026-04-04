@@ -46,12 +46,14 @@
   "_meta": {
     "install_steps": [
       "Go to the [Slack App Dashboard](https://api.slack.com/apps).",
-      "Select your app or **Create an App**.",
+      "Select your App or **Create an App**. Eventually, you should see **Basic Information** about App.",
       "Copy **Client ID**: [slack_client_id]",
       "Copy **Client Secret**: [slack_client_secret]",
       "In the left sidebar, click **OAuth & Permissions** from **Features**.",
       "Click **Add New Redirect URL** and enter URL *https://localhost:3118/callback*, where **3118** from [slack_callback_port]",
-      "Click **Add**, then click **Save URLs**."
+      "Click **Add**, then click **Save URLs**.",
+      "On this same page, you must add at least one scope to **Bot Token Scopes**. For example *search:read.public*.",
+      "Finally, go to the **Agents & AI Apps** and turn on the **Model Context Protocol**."
     ],
     "io.qent.broxy/catalog": {
       "capabilities": [
