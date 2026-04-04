@@ -160,10 +160,6 @@
     {
       "id": "todoist",
       "path": "servers/todoist.json"
-    },
-    {
-      "id": "vercel",
-      "path": "servers/vercel.json"
     }
   ]
 }
