@@ -4,7 +4,7 @@
   "title": "Pipedream",
   "description": "Integration and workflow automation platform for connecting APIs, apps, and AI agents.",
   "version": "latest",
-  "websiteUrl": "https://mcp.pipedream.com/configuration",
+  "websiteUrl": "https://pipedream.com/docs/connect/mcp/users",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/pipedream.png",
