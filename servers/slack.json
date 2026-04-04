@@ -23,6 +23,7 @@
         "clientId": "{slack_client_id}",
         "clientSecret": "{slack_client_secret}",
         "callbackPort": "{slack_callback_port}",
+        "redirectUri": "https://localhost:{slack_callback_port}/callback",
         "tokenEndpointAuthMethod": "client_secret_post",
         "allowDynamicRegistration": false
       },
