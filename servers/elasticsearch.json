@@ -1,14 +1,10 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.qent.broxy/elasticsearch",
-  "title": "Elasticsearch",
-  "description": "Search and analytics engine for indexed data, vector search, and observability workloads.",
+  "title": "Elastic",
+  "description": "Elastic Agent Builder MCP endpoint for search and analytics workflows.",
   "version": "1.0.0",
-  "websiteUrl": "https://github.com/elastic/mcp-server-elasticsearch",
-  "repository": {
-    "source": "github",
-    "url": "https://github.com/elastic/mcp-server-elasticsearch"
-  },
+  "websiteUrl": "https://www.elastic.co/docs/explore-analyze/ai-features/agent-builder/mcp-server",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/elasticsearch.png",
@@ -18,97 +14,31 @@
       ]
     }
   ],
-  "packages": [
+  "remotes": [
     {
-      "registryType": "docker",
-      "identifier": "docker.elastic.co/mcp/elasticsearch",
-      "runtimeHint": "docker",
-      "transport": {
-        "type": "stdio"
-      },
-      "runtimeArguments": [
-        {
-          "type": "positional",
-          "value": "run"
-        },
-        {
-          "type": "positional",
-          "value": "-i"
-        },
-        {
-          "type": "positional",
-          "value": "--rm"
-        },
-        {
-          "type": "positional",
-          "value": "-e"
-        },
-        {
-          "type": "positional",
-          "value": "ES_URL"
-        },
-        {
-          "type": "positional",
-          "value": "-e"
-        },
-        {
-          "type": "positional",
-          "value": "ES_API_KEY"
-        },
-        {
-          "type": "positional",
-          "value": "-e"
-        },
-        {
-          "type": "positional",
-          "value": "ES_USERNAME"
-        },
-        {
-          "type": "positional",
-          "value": "-e"
-        },
-        {
-          "type": "positional",
-          "value": "ES_PASSWORD"
-        },
-        {
-          "type": "positional",
-          "value": "-e"
-        },
-        {
-          "type": "positional",
-          "value": "ES_SSL_SKIP_VERIFY"
-        }
-      ],
-      "packageArguments": [
-        {
-          "type": "positional",
-          "value": "stdio"
-        }
-      ],
-      "environmentVariables": [
-        {
-          "description": "Your Elasticsearch instance URL",
+      "type": "streamable-http",
+      "url": "{KIBANA_URL}/api/agent_builder/mcp",
+      "variables": {
+        "KIBANA_URL": {
+          "description": "Kibana host (with scheme), optionally including /s/{space_name} for non-default spaces.",
           "isRequired": true,
-          "name": "ES_URL"
-        },
+          "placeholder": "http"
+        }
+      },
+      "headers": [
         {
-          "description": "Elasticsearch API key for authentication",
+          "name": "Authorization",
+          "description": "Elastic API key header in format: ApiKey <key>.",
+          "value": "ApiKey {API_KEY}",
+          "isRequired": true,
           "isSecret": true,
-          "name": "ES_API_KEY"
-        },
-        {
-          "description": "Elasticsearch username for basic authentication",
-          "name": "ES_USERNAME"
-        },
-        {
-          "description": "Elasticsearch password for basic authentication",
-          "isSecret": true,
-          "name": "ES_PASSWORD"
-        },
-        {
-          "description": "Set to '1' or 'true' to skip SSL certificate verification",
-          "name": "ES_SSL_SKIP_VERIFY"
+          "variables": {
+            "API_KEY": {
+              "description": "Elastic API key with Agent Builder MCP access privileges.",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
         }
       ]
     }

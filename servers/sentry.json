@@ -18,37 +18,10 @@
       ]
     }
   ],
-  "packages": [
+  "remotes": [
     {
-      "registryType": "npm",
-      "identifier": "@sentry/mcp-server",
-      "runtimeHint": "npx",
-      "transport": {
-        "type": "stdio"
-      },
-      "runtimeArguments": [
-        {
-          "type": "positional",
-          "value": "-y"
-        }
-      ],
-      "environmentVariables": [
-        {
-          "description": "Sentry user auth token with necessary scopes",
-          "isRequired": true,
-          "isSecret": true,
-          "name": "SENTRY_ACCESS_TOKEN"
-        },
-        {
-          "description": "Sentry host URL (e.g., sentry.example.com)",
-          "name": "SENTRY_HOST"
-        },
-        {
-          "description": "OpenAI API key for AI-powered search tools (search_events, search_issues)",
-          "isSecret": true,
-          "name": "OPENAI_API_KEY"
-        }
-      ]
+      "type": "streamable-http",
+      "url": "https://mcp.sentry.dev/mcp"
     }
   ],
   "_meta": {
