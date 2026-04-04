@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/atlassian",
+  "title": "Atlassian",
+  "description": "Team collaboration platform with Jira, Confluence, and Compass data accessible through MCP.",
+  "version": "latest",
+  "websiteUrl": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/atlassian.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "oauth": {
+        "type": "oauth",
+        "allowDynamicRegistration": true
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

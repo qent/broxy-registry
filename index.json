@@ -2,6 +2,14 @@
   "schemaVersion": 1,
   "servers": [
     {
+      "id": "asana",
+      "path": "servers/asana.json"
+    },
+    {
+      "id": "atlassian",
+      "path": "servers/atlassian.json"
+    },
+    {
       "id": "aws-api",
       "path": "servers/aws-api.json"
     },
@@ -98,6 +106,10 @@
       "path": "servers/mcp-server-neon.json"
     },
     {
+      "id": "miro",
+      "path": "servers/miro.json"
+    },
+    {
       "id": "notion",
       "path": "servers/notion.json"
     },
@@ -108,6 +120,10 @@
     {
       "id": "phoenix",
       "path": "servers/phoenix.json"
+    },
+    {
+      "id": "pipedream",
+      "path": "servers/pipedream.json"
     },
     {
       "id": "playwright",
@@ -156,6 +172,10 @@
     {
       "id": "todoist",
       "path": "servers/todoist.json"
+    },
+    {
+      "id": "zapier",
+      "path": "servers/zapier.json"
     }
   ]
 }

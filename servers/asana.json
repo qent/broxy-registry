@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/asana",
+  "title": "Asana",
+  "description": "Work management platform for planning, tracking, and coordinating projects and tasks.",
+  "version": "latest",
+  "websiteUrl": "https://developers.asana.com/docs/using-asanas-mcp-server",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/asana.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.asana.com/mcp",
+      "oauth": {
+        "type": "oauth",
+        "allowDynamicRegistration": true
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
