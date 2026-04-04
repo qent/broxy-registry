@@ -18,35 +18,41 @@
     {
       "type": "streamable-http",
       "url": "https://mcp.slack.com/mcp",
-      "headers": [
-        {
-          "name": "clientId",
-          "description": "OAuth client ID required by backend for Slack MCP authorization.",
-          "value": "{slack_client_id}",
-          "isRequired": true,
-          "variables": {
-            "slack_client_id": {
-              "description": "OAuth client ID for Slack MCP.",
-              "isRequired": true
-            }
-          }
+      "oauth": {
+        "type": "oauth",
+        "clientId": "{slack_client_id}",
+        "clientSecret": "{slack_client_secret}",
+        "callbackPort": "{slack_callback_port}",
+        "tokenEndpointAuthMethod": "client_secret_post",
+        "allowDynamicRegistration": false
+      },
+      "variables": {
+        "slack_client_id": {
+          "description": "OAuth client ID for Slack MCP.",
+          "isRequired": true
         },
-        {
-          "name": "clientIdMetadataUrl",
-          "description": "OAuth client metadata URL required by backend when dynamic client registration is unavailable.",
-          "value": "{slack_client_id_metadata_url}",
+        "slack_client_secret": {
+          "description": "OAuth client secret for Slack MCP.",
           "isRequired": true,
-          "variables": {
-            "slack_client_id_metadata_url": {
-              "description": "URL to OAuth client metadata document for Slack MCP.",
-              "isRequired": true
-            }
-          }
+          "isSecret": true
+        },
+        "slack_callback_port": {
+          "description": "OAuth callback port for local redirect listener.",
+          "default": "3118"
         }
-      ]
+      }
     }
   ],
   "_meta": {
+    "install_steps": [
+      "Go to the [Slack App Dashboard](https://api.slack.com/apps).",
+      "Select your app or **Create an App**.",
+      "Copy **Client ID**: [slack_client_id]",
+      "Copy **Client Secret**: [slack_client_secret]",
+      "In the left sidebar, click **OAuth & Permissions** from **Features**.",
+      "Click **Add New Redirect URL** and enter URL *https://localhost:3118/callback*, where **3118** from [slack_callback_port]",
+      "Click **Add**, then click **Save URLs**."
+    ],
     "io.qent.broxy/catalog": {
       "capabilities": [
         "tools"
