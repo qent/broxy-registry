@@ -31,7 +31,8 @@
         "stdioBootstrap": {
           "tool": "start_google_auth",
           "args": {
-            "service_name": "gmail"
+            "service_name": "gmail",
+            "user_google_email": "{USER_GOOGLE_EMAIL}"
           }
         }
       },
@@ -63,7 +64,8 @@
         },
         {
           "name": "USER_GOOGLE_EMAIL",
-          "description": "Optional default Google account email used by legacy OAuth 2.0 tools."
+          "description": "Google account email address used for legacy OAuth bootstrap.",
+          "isRequired": true
         },
         {
           "name": "MCP_ENABLE_OAUTH21",
@@ -90,8 +92,9 @@
       "Open [Project configuration](https://console.cloud.google.com/auth/overview/create) and make sure the project created in the previous step is selected in the top dropdown to the right of **Google Cloud**.",
       "Fill **App name**, **User support email**, **Audience: External**, and **Contact Information**. At the end click **Create**.",
       "Open [Create OAuth client ID](https://console.cloud.google.com/auth/clients/create) and select **Desktop app** in **Application type**. Choose a client name, for example **Broxy**, then click **Create**.",
-      "In the **OAuth client created** popup, copy **Client ID** to [GOOGLE_OAUTH_CLIENT_ID].",
-      "Copy **Client secret** to [GOOGLE_OAUTH_CLIENT_SECRET].",
+      "In the **OAuth client created** popup, copy **Client ID** to [GOOGLE_OAUTH_CLIENT_ID]",
+      "Copy **Client secret** to [GOOGLE_OAUTH_CLIENT_SECRET]",
+      "Set to the exact Google account email that must be authenticated [USER_GOOGLE_EMAIL]",
       "Enable required services in [API Library](https://console.cloud.google.com/apis/library): [Gmail](https://console.cloud.google.com/apis/library/gmail.googleapis.com), [Google Sheets](https://console.cloud.google.com/apis/library/sheets.googleapis.com), [Google Calendar](https://console.cloud.google.com/apis/library/calendar-json.googleapis.com), and others."
     ],
     "io.qent.broxy/catalog": {
