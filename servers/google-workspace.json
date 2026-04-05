@@ -1,0 +1,103 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/google-workspace",
+  "title": "Google Workspace",
+  "description": "Google Workspace MCP server for Gmail, Calendar, Drive, Docs, Sheets, and related Google tools.",
+  "version": "latest",
+  "websiteUrl": "https://github.com/taylorwilsdon/google_workspace_mcp",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/taylorwilsdon/google_workspace_mcp"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/google-workspace.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "workspace-mcp",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "oauth": {
+        "type": "oauth",
+        "stdioBootstrap": {
+          "tool": "start_google_auth",
+          "args": {
+            "service_name": "gmail"
+          }
+        }
+      },
+      "packageArguments": [
+        {
+          "type": "named",
+          "name": "--tool-tier",
+          "valueHint": "tool_tier",
+          "description": "Tool tier to load (core, extended, complete).",
+          "default": "complete",
+          "choices": [
+            "core",
+            "extended",
+            "complete"
+          ]
+        }
+      ],
+      "environmentVariables": [
+        {
+          "name": "GOOGLE_OAUTH_CLIENT_ID",
+          "description": "Google OAuth Client ID for workspace-mcp.",
+          "isRequired": true
+        },
+        {
+          "name": "GOOGLE_OAUTH_CLIENT_SECRET",
+          "description": "Google OAuth Client Secret for workspace-mcp.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "USER_GOOGLE_EMAIL",
+          "description": "Optional default Google account email used by legacy OAuth 2.0 tools."
+        },
+        {
+          "name": "MCP_ENABLE_OAUTH21",
+          "description": "Enable OAuth 2.1 mode. Keep false for stdio + start_google_auth flow.",
+          "default": "false"
+        },
+        {
+          "name": "OAUTHLIB_INSECURE_TRANSPORT",
+          "description": "Allow localhost HTTP callback for legacy OAuth 2.0 flow.",
+          "default": "1"
+        },
+        {
+          "name": "WORKSPACE_MCP_PORT",
+          "description": "Local callback/server port used by workspace-mcp.",
+          "default": "8000"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "install_steps": [
+      "Open [Resource manager](https://console.cloud.google.com/cloud-resource-manager) from **Google Cloud console** and click [Create project](https://console.cloud.google.com/projectcreate).",
+      "Choose a project name, for example *Google Workspace MCP*, and click **Create**. After creating the project, **Resource manager** will open again.",
+      "Open [Project configuration](https://console.cloud.google.com/auth/overview/create) and make sure the project created in the previous step is selected in the top dropdown to the right of **Google Cloud**.",
+      "Fill **App name**, **User support email**, **Audience: External**, and **Contact Information**. At the end click **Create**.",
+      "Open [Create OAuth client ID](https://console.cloud.google.com/auth/clients/create) and select **Desktop app** in **Application type**. Choose a client name, for example **Broxy**, then click **Create**.",
+      "In the **OAuth client created** popup, copy **Client ID** to [GOOGLE_OAUTH_CLIENT_ID].",
+      "Copy **Client secret** to [GOOGLE_OAUTH_CLIENT_SECRET].",
+      "Enable required services in [API Library](https://console.cloud.google.com/apis/library): [Gmail](https://console.cloud.google.com/apis/library/gmail.googleapis.com), [Google Sheets](https://console.cloud.google.com/apis/library/sheets.googleapis.com), [Google Calendar](https://console.cloud.google.com/apis/library/calendar-json.googleapis.com), and others."
+    ],
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
