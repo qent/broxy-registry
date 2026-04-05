@@ -66,6 +66,14 @@
       "path": "servers/context7.json"
     },
     {
+      "id": "deepwiki",
+      "path": "servers/deepwiki.json"
+    },
+    {
+      "id": "desktop-commander",
+      "path": "servers/desktop-commander.json"
+    },
+    {
       "id": "dropbox",
       "path": "servers/dropbox.json"
     },
@@ -92,6 +100,10 @@
     {
       "id": "github",
       "path": "servers/github.json"
+    },
+    {
+      "id": "gitlab",
+      "path": "servers/gitlab.json"
     },
     {
       "id": "grafana",

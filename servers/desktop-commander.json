@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/desktop-commander",
+  "title": "Desktop Commander",
+  "description": "Open-source MCP server for controlled local file, terminal, and workflow access.",
+  "version": "latest",
+  "websiteUrl": "https://desktopcommander.app/mcp/",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/desktop-commander.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@wonderwhy-er/desktop-commander@latest",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "positional",
+          "value": "-y"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
