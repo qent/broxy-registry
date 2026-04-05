@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/mapbox",
+  "title": "Mapbox",
+  "description": "Mapbox MCP server for geocoding, routing, POI discovery, and map generation workflows.",
+  "version": "latest",
+  "websiteUrl": "https://github.com/mapbox/mcp-server",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/mapbox/mcp-server"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/mapbox.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.mapbox.com/mcp",
+      "oauth": {
+        "type": "oauth",
+        "allowDynamicRegistration": true
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

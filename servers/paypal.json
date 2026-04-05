@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.qent.broxy/paypal",
+  "title": "PayPal",
+  "description": "PayPal MCP server for agentic commerce tasks across merchant payments and billing workflows.",
+  "version": "latest",
+  "websiteUrl": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/qent/broxy-registry/main/icons/paypal.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.paypal.com/http",
+      "oauth": {
+        "type": "oauth",
+        "allowDynamicRegistration": true
+      }
+    }
+  ],
+  "_meta": {
+    "io.qent.broxy/catalog": {
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}

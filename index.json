@@ -102,12 +102,20 @@
       "path": "servers/graphlit.json"
     },
     {
+      "id": "huggingface",
+      "path": "servers/huggingface.json"
+    },
+    {
       "id": "jetbrains",
       "path": "servers/jetbrains.json"
     },
     {
       "id": "linear",
       "path": "servers/linear.json"
+    },
+    {
+      "id": "mapbox",
+      "path": "servers/mapbox.json"
     },
     {
       "id": "mcp-clickhouse",
@@ -128,6 +136,10 @@
     {
       "id": "notion",
       "path": "servers/notion.json"
+    },
+    {
+      "id": "paypal",
+      "path": "servers/paypal.json"
     },
     {
       "id": "perplexity-ask",
@@ -192,6 +204,10 @@
     {
       "id": "todoist",
       "path": "servers/todoist.json"
+    },
+    {
+      "id": "wix",
+      "path": "servers/wix.json"
     },
     {
       "id": "zapier",

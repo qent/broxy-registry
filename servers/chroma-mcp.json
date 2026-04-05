@@ -29,18 +29,16 @@
       "environmentVariables": [
         {
           "name": "CHROMA_CLIENT_TYPE",
-          "description": "Client type: http, cloud, persistent, or ephemeral.",
-          "default": "http"
+          "description": "Client type: ephemeral, persistent, cloud, or http.",
+          "default": "ephemeral"
         },
         {
           "name": "CHROMA_HOST",
-          "description": "Host for self-hosted Chroma HTTP client (required for default HTTP mode).",
-          "isRequired": true
+          "description": "Host for self-hosted Chroma HTTP client."
         },
         {
           "name": "CHROMA_PORT",
-          "description": "Port for self-hosted Chroma HTTP client (required for default HTTP mode).",
-          "isRequired": true
+          "description": "Port for self-hosted Chroma HTTP client."
         },
         {
           "name": "CHROMA_SSL",
