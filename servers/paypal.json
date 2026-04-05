@@ -16,8 +16,8 @@
   ],
   "remotes": [
     {
-      "type": "streamable-http",
-      "url": "https://mcp.paypal.com/http",
+      "type": "sse",
+      "url": "https://mcp.paypal.com/sse",
       "oauth": {
         "type": "oauth",
         "allowDynamicRegistration": true
